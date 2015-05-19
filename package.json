@@ -1,0 +1,18 @@
+{
+  "name": "storm-react-forms",
+  "version": "0.0.1",
+  "description": "Frontend Form system",
+  "author": "Dylan Vorster",
+  "contributors": [
+	"Niko Lubbe"
+  ],
+  "license": "ISC",
+  "main": "src/main.js",
+  "dependencies": {
+    "lodash": "^3.6.0",
+    "react": "^0.13.2"
+  },
+  "devDependencies": {
+    "express": "^4.12.4"
+  }
+}
