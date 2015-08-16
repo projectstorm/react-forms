@@ -1,8 +1,0 @@
-site_name: STORM React Forms
-site_description: Documentation for Storm React Forms
-site_author: Dylan Vorster
-docs_dir: src/docs
-site_dir: docs
-pages:
-- [index.md, Home]
-theme: readthedocs
