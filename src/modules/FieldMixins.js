@@ -7,7 +7,7 @@ module.exports = {
 	},
 
 	change: function(event){
-		this.state.value = event.target.value;
+		this.state.value = event.nativeEvent.target.value;
 		this.setState(this.state);
 		this.props.handler(this.props.name,this.state.value);
 	},

@@ -118,12 +118,22 @@ module.exports = {
 };
 
 module.exports.factories = {
+	"input":require("./elements/TextInput"), //alias
+	"textinput":require("./elements/TextInput"), //alias
 	"text":require("./elements/TextInput"),
+	
+	"pass":require("./elements/Password"),
+	"password": require("./elements/Password"),//alias
+	
 	"model":require("./layout/Model"),
 	"multi":require("./layout/Multi"),
+	
 	"select":require("./elements/Select"),
+	"dropdown":require("./elements/Select"), //alias
+	
 	"boolean":require("./elements/CheckBox"), //alias
 	"checkbox":require("./elements/CheckBox"),
+	
 	"file":require("./elements/File"),
 	"area":require("./elements/TextArea"),
 	"auto":require("./elements/AutoInput")
