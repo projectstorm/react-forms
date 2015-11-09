@@ -1,9 +1,12 @@
-var StormForms = require("../");
+var StormForms = require("..");
 var React = require("react");
+var ReactDOM = require("react-dom");
 var div = React.createFactory('div');
 
+require("./test.scss");
+
+
 window.onload = function(){
-	
 	
 	var forms = [];
 	
@@ -73,7 +76,8 @@ window.onload = function(){
 		StormForms.FormFactory({ action: formAction},
 			div(null,
 				div({className: "myclass"},
-					StormForms.factories.Input,{name: "Test Input 2"})))
+					StormForms.factories.Input({name: "Test Input 2"}))
+			))
 					
 					
 	});
@@ -147,14 +151,12 @@ window.onload = function(){
 		
 	});
 	
-	
 	for(var i = 0;i < forms.length;i++){
 		var element = document.createElement('div');
 		element.setAttribute('id','form-'+i);
 		document.body.appendChild(element);
 	
 		console.log("Form: "+forms[i].name);
-		React.render(div({},'Form: '+forms[i].name,forms[i].form),element);
+		ReactDOM.render(div({},'Form: '+forms[i].name,forms[i].form),element);
 	}
-	
 };

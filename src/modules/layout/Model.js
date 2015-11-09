@@ -5,6 +5,7 @@ var Engine = require("../Engine");
  * @type @exp;React@call;createClass
  */
 module.exports = React.createClass({
+	displayName: "Model",
 	getDefaultProps: function(){
 		return {
 			name: "Unknown Model",
@@ -44,16 +45,13 @@ module.exports = React.createClass({
 		children.push(this.generateElement(element));
 				
 		//each element is rendered as a row
-		return React.createElement('tr',null,children);
+		return React.createElement('tr',element.key,children);
 	},
 	
 	generateVertical: function(children){
 		var elements = [];
 		React.Children.forEach(children,function(element){
 			if(!this.props.sideLabels){
-//				if(this.props.labels){
-//					elements.push(React.createElement('tr',null,this.generateLabel(element)));
-//				}
 				elements.push(React.createElement('tr',null,element));
 			}else{
 				elements.push(this.generateVerticalRowSideLabels(element));
@@ -72,9 +70,9 @@ module.exports = React.createClass({
 		}.bind(this));
 		
 		if(this.props.labels){
-			elements.push(React.createElement('tr',null,labels));
+			elements.push(React.createElement('tr',{key:elements.length},labels));
 		}
-		elements.push(React.createElement('tr',null,children));
+		elements.push(React.createElement('tr',{key:elements.length},children));
 		return elements;
 	},
 	
@@ -87,6 +85,6 @@ module.exports = React.createClass({
 			children = this.generateHorizontal(children);
 		}
 		
-		return React.createElement("table",{className:"storm-model" },children);
+		return React.DOM.table({className:"storm-model" },React.DOM.tbody(null,children));
 	}
 });

@@ -69,6 +69,6 @@ module.exports = React.createClass({
 				React.createElement('td',{colSpan:2},
 					React.createElement(Button,{name:"Add",action:this.addRow}))));
 		
-		return React.createElement("table",null,temp);
+		return React.DOM.table(null,React.DOM.tbody(null,temp));
 	}
 });

@@ -4,16 +4,20 @@
   "description": "Frontend Form system",
   "author": "Dylan Vorster",
   "contributors": [
-	"Niko Lubbe"
+    "Niko Lubbe"
   ],
   "license": "ISC",
   "main": "src/main.js",
   "dependencies": {
     "lodash": "^3.6.0",
-    "react": "0.14.0-beta1"
+    "react": "0.14.2"
   },
   "devDependencies": {
-    "express": "^4.12.4",
-	"storm-serve": "git+https://git@github.com/projectstorm/serve.git"
+    "css-loader": "^0.22.0",
+    "node-sass": "^3.4.1",
+    "react-dom": "^0.14.2",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.3"
   }
 }

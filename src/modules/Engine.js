@@ -24,10 +24,10 @@ module.exports = {
 		}
 		if(Array.isArray(children)){
 			elements = children.map(function(child){
-				return this.generateElement(child);
+				return this.generateElement(child,{handler:handler});
 			}.bind(this));
 		}else{
-			elements = this.generateElement(children);
+			elements = this.generateElement(children,{handler:handler});
 		}
 		
 		//pass in a handler
@@ -40,7 +40,7 @@ module.exports = {
 		}
 		return React.Children.map(children, function(childElement){
 			//can happen that a model is passed in
-			if(!childElement._isReactElement){
+			if(!React.isValidElement(childElement)){
 				return this.generateElement(childElement,{handler:handler});
 			}
 			
@@ -69,7 +69,7 @@ module.exports = {
 	generateLabel: function(elementModel){
 		var label = null;
 		//if its a react element then just use it
-		if(elementModel._isReactElement){
+		if(React.isValidElement(elementModel)){
 			if(elementModel.props.name){
 				label = elementModel.props.name;
 			}else{
@@ -108,7 +108,8 @@ module.exports = {
 		elementModel.ref = elementModel.name;
 		
 		var type = elementModel.type || "text";
-		return React.createElement(this.factories[type],_merge(elementModel,extraProps || {} ));
+		var props = _merge(elementModel,extraProps || {} );
+		return React.createElement(this.factories[type],props);
 	},
 	
 	render: function(model,element){

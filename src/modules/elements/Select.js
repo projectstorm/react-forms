@@ -29,11 +29,11 @@ module.exports = React.createClass({
 		var temp = [];
 		if(Array.isArray(this.props.options)){
 			this.props.options.forEach(function(prop,key){
-				temp.push(React.createElement('option',{value:prop},prop));
+				temp.push(React.createElement('option',{value:prop,key:key},prop));
 			});
 		}else{
 			for(var i in this.props.options){
-				temp.push(React.createElement('option',{value:i},this.props.options[i]));
+				temp.push(React.createElement('option',{value:i,key:i},this.props.options[i]));
 			}
 		}
 		
