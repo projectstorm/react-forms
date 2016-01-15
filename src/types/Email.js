@@ -2,7 +2,7 @@ var React = require("react");
 var ValidationComponent = require("../components/ValidationComponent");
 var TextField = require("../components/TextField");
 var Toolkit = require("../Toolkit");
-var _merge = require("lodash/object/merge");
+var _merge = require("lodash/merge");
 /**
  * @author Dylan Vorster
  */

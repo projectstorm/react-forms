@@ -1,7 +1,7 @@
 var React = require("react");
 var KeyList = require("../types/KeyList");
 var Toolkit = require("../Toolkit");
-var _at = require("lodash/collection/at");
+var _at = require("lodash/at");
 /**
  * @author Dylan Vorster
  */

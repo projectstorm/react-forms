@@ -9,11 +9,11 @@
   "license": "ISC",
   "main": "src/main.js",
   "dependencies": {
-    "lodash": "^3.6.0",
-    "react": "0.14.3"
+    "lodash": "^4.0.0",
+    "react": "0.14.6"
   },
   "devDependencies": {
-    "css-loader": "^0.22.0",
+    "css-loader": "^0.23.1",
     "node-sass": "^3.4.1",
     "react-dom": "^0.14.2",
     "sass-loader": "^3.1.1",

@@ -1,10 +1,10 @@
 var React = require("react");
 var Dropdown = require("./Dropdown");
-var _uniq = require("lodash/array/uniq");
-var _omit = require("lodash/object/omit");
-var _pick = require("lodash/object/pick");
-var _pull = require("lodash/array/pull");
-var _dropRight = require("lodash/array/dropright");
+var _uniq = require("lodash/uniq");
+var _omit = require("lodash/omit");
+var _pick = require("lodash/pick");
+var _pull = require("lodash/pull");
+var _dropRight = require("lodash/dropRight");
 var TextField = require("./TextField");
 var ComponentMixin = require("../ComponentMixin");
 /**

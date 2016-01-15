@@ -1,5 +1,5 @@
 var React = require("react");
-var _foreach = require("lodash/collection/foreach");
+var _foreach = require("lodash/forEach");
 /**
  * @author Dylan Vorster
  */

@@ -1,5 +1,5 @@
 var React = require("react");
-var _merge = require("lodash/object/merge");
+var _merge = require("lodash/merge");
 var ComponentMixin = require("../ComponentMixin");
 var PlaceholderMixin = require("../PlaceholderMixin");
 

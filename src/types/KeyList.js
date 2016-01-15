@@ -1,7 +1,7 @@
 var React = require("react");
 var Checkbox = require("../components/Checkbox");
-var _unique = require("lodash/array/uniq");
-var _pull = require("lodash/array/pull");
+var _unique = require("lodash/uniq");
+var _pull = require("lodash/pull");
 var Toolkit = require("../Toolkit");
 /**
  * @author Dylan Vorster
