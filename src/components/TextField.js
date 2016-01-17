@@ -8,6 +8,7 @@ var PlaceholderMixin = require("../PlaceholderMixin");
  */
 module.exports = React.createClass({
 	displayName: "TextField",
+	_isStormField: true,
 	mixins: [ComponentMixin(),PlaceholderMixin],
 	getDefaultProps: function(){
 		return {

@@ -14,6 +14,6 @@ module.exports = function(props){
 					return "Email Invalid";
 				}
 			}
-		},props),React.createElement(TextField)
+		},props),React.createElement(TextField,props)
 	);
 };

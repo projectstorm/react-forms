@@ -377,10 +377,11 @@ window.onload = function(){
 		}}),
 	
 		React.DOM.h1({},"Forms"),
-		DemoBlock({name: "Simple Form",content: function(){
+		DemoBlock({name: "Simple Form",content: function(console){
+				
 			return (
 				SF.DOM.form({onSubmit: function(model){
-						console.log(model);
+						console.log(JSON.stringify(model));
 					}},
 					SF.DOM.textfield({name: "Field1"}),
 					React.DOM.div(null,
@@ -391,10 +392,10 @@ window.onload = function(){
 				)
 			);
 		}}),
-		DemoBlock({name: "Table Form",content: function(){
+		DemoBlock({name: "Table Form",content: function(console){
 			return (
 				SF.DOM.form({onSubmit: function(model){
-						console.log(model);
+						console.log(JSON.stringify(model));
 					}},
 					SF.DOM.table(null,
 						SF.DOM.textfield({name: "Field1"}),
@@ -415,10 +416,10 @@ window.onload = function(){
 				)
 			);
 		}}),
-		DemoBlock({name: "Table Form",content: function(){
+		DemoBlock({name: "Table Form",content: function(console){
 			return (
 				SF.DOM.form({onSubmit: function(model){
-						console.log(model);
+						console.log(JSON.stringify(model));
 					}},
 					SF.DOM.table(null,
 						SF.DOM.textfield({name: "Field1"}),
@@ -427,10 +428,10 @@ window.onload = function(){
 				)
 			);
 		}}),
-		DemoBlock({name: "Compiled Form",content: function(){
+		DemoBlock({name: "Compiled Form",content: function(console){
 			return (
 				SF.DOM.compiledform({onSubmit: function(model){
-						console.log(model);
+						console.log(JSON.stringify(model));
 					}},{
 						name:"Name",
 						surname:"Surname",
