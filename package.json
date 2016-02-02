@@ -10,7 +10,7 @@
   "main": "src/main.js",
   "dependencies": {
     "lodash": "^4.0.0",
-    "react": "0.14.6"
+    "react": "0.14.7"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",

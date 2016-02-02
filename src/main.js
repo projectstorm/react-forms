@@ -25,5 +25,10 @@ module.exports = {
 		list:			React.createFactory(require("./types/List")),
 		email:			require("./types/Email"),
 		compiledform:	require("./types/CompiledForm")
-	}
+	},
+	mixins:{
+		ComponentMixin: require("./ComponentMixin"),
+		PlaceholderMixin: require("./PlaceholderMixin")
+	},
+	Toolkit: require("./Toolkit")
 };
