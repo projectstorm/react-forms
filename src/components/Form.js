@@ -7,6 +7,7 @@ var button = require("./Button");
 module.exports = React.createClass({
 	getDefaultProps: function(){
 		return {
+			showReset: true,
 			onSubmit: function(model){
 				
 			}
@@ -58,9 +59,12 @@ module.exports = React.createClass({
 				React.createElement(button,{name:"Submit",action: function(){
 					this.fireSubmit();
 				}.bind(this)}),
-				React.createElement(button,{name:"Reset",action: function(){
-					this.refs.group.reset();
-				}.bind(this)})
+			
+				//show the reset button?
+				this.props.showReset?
+					React.createElement(button,{name:"Reset",action: function(){
+						this.refs.group.reset();
+					}.bind(this)}):null
 			)
 		);
 	}
