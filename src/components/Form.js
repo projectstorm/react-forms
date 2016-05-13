@@ -29,7 +29,6 @@ module.exports = React.createClass({
 			
 			//bind the name
 			if(child.props.name && child.type.displayName === 'TextField'){
-				console.log(child.props.name);
 				return React.cloneElement(child,{
 					onKeyDown:function(event){
 						if(event.keyCode === 13){
