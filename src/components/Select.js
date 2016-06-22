@@ -1,5 +1,6 @@
 var React = require("react");
 var _merge = require("lodash/merge");
+var _ = require("lodash");
 var ComponentMixin = require("../ComponentMixin");
 /**
  * @author Dylan Vorster
@@ -35,13 +36,15 @@ module.exports = React.createClass({
 	},
 	
 	render: function(){
+		var props = _.clone(this.props);
+		delete props.children;
 		
-		var props = _merge({
+		_.defaults(props,{
 			className: "storm-select",
 			onChange: function(event){
 				this.setValue(event.target.value);
 			}.bind(this)
-		},this.props);
+		});
 		
 		props.value = this.state.value;
 		
