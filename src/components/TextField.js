@@ -15,9 +15,8 @@ module.exports = React.createClass({
 			type: 'text'
 		};
 	},
-	
-	render: function(){ 
-		
+
+	render: function(){
 		var props = _merge({
 			className: "storm-field",
 			placeholder: this.getPlaceholder(),
@@ -25,8 +24,10 @@ module.exports = React.createClass({
 				this.setValue(event.target.value);
 			}.bind(this)
 		},this.props);
-		props.value = this.state.value;
-		
+		props.value = this.state.value
+		if(!this.state.value){
+			props.value = "";
+		}
 		return React.DOM.input(props);
 	}
 });

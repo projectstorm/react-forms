@@ -22,16 +22,13 @@ module.exports = React.createClass({
 		};
 	},
 	validate: function(value,fireChange){
-		
-		
-		
 		if(fireChange === undefined){
 			fireChange = true;
-		} 
+		}
 		this.state.value = value;
-		
+
 		var isEmpty = value === null || value === [] || false;
-		
+
 		if((this.props.required && isEmpty) || !isEmpty){
 			var error = this.props.validate(value);
 			if(error === false){

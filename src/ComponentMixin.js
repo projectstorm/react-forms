@@ -7,9 +7,9 @@ module.exports = function(ob){
 	return {
 		getDefaultProps: function(){
 			return {
-				value: ob.value || null,
+				value: ob.value || undefined,
 				change: function(value){
-					
+
 				}
 			};
 		},
@@ -23,9 +23,10 @@ module.exports = function(ob){
 				value: value
 			};
 		},
-		
+
 		componentWillReceiveProps: function(nextProps){
-			if(nextProps.value){
+			console.log(this.props.name,nextProps);
+			if(nextProps.value !== undefined){
 				this.setState({value: nextProps.value});
 			}
 		},
@@ -37,17 +38,23 @@ module.exports = function(ob){
 			if(value === ""){
 				return null;
 			}
+			if(value === undefined){
+				return null;
+			}
 			return value;
 		},
-		
+
 		reset: function(){
-			this.setValue(this.state.resetValue);
+			this.state.value = this.state.resetValue;
+			this.setState(this.state,function(){
+				Toolkit.fireCallback(this.props.change,this.clean(this.state.resetValue));
+			}.bind(this));
 		},
-		
+
 		fireChangeEvent: function(){
 			Toolkit.fireCallback(this.props.change,this.clean(this.state.value));
 		},
-		
+
 		setValue: function(value){
 			if(value === undefined){
 				value = this.state.value;
