@@ -10,7 +10,8 @@ module.exports = function(ob){
 				value: ob.value || undefined,
 				change: function(value){
 
-				}
+				},
+				allowPropValueUpdate: true
 			};
 		},
 		getInitialState: function(){
@@ -25,8 +26,7 @@ module.exports = function(ob){
 		},
 
 		componentWillReceiveProps: function(nextProps){
-			console.log(this.props.name,nextProps);
-			if(nextProps.value !== undefined){
+			if(this.props.allowPropValueUpdate && nextProps.value !== undefined){
 				this.setState({value: nextProps.value});
 			}
 		},
