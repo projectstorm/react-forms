@@ -2,7 +2,19 @@
     "name": "storm-react-forms",
     "main":"./dist/main.js",
     "typings": "./dist/src/main",
-    "dependencies": {
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/projectstorm/react-forms.git"
+	},
+	"keywords": [
+		"web",
+		"forms",
+		"form",
+		"react",
+		"typescript",
+		"simple"
+	],
+	"dependencies": {
         "@types/lodash": "^4.14.63",
         "@types/react": "^15.0.22",
         "@types/react-dom": "^15.5.0",
