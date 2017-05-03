@@ -1,33 +1,34 @@
 {
-    "name": "storm-react-forms",
-    "main":"./dist/main.js",
-    "typings": "./dist/src/main",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/projectstorm/react-forms.git"
-	},
-	"keywords": [
-		"web",
-		"forms",
-		"form",
-		"react",
-		"typescript",
-		"simple"
-	],
-	"dependencies": {
-        "@types/lodash": "^4.14.63",
-        "@types/react": "^15.0.22",
-        "@types/react-dom": "^15.5.0",
-        "css-loader": "^0.28.0",
-        "lodash": "^4.17.4",
-        "node-sass": "^4.5.2",
-        "react": "^15.5.4",
-        "react-dom": "^15.5.4",
-        "sass-loader": "^6.0.3",
-        "source-map-loader": "^0.2.1",
-        "style-loader": "^0.16.1",
-        "ts-loader": "^2.0.3",
-        "typescript": "^2.3.1",
-        "webpack": "^2.4.1"
-    }
+  "name": "storm-react-forms",
+  "main": "./dist/main.js",
+  "typings": "./dist/src/main",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/projectstorm/react-forms.git"
+  },
+  "keywords": [
+    "web",
+    "forms",
+    "form",
+    "react",
+    "typescript",
+    "simple"
+  ],
+  "dependencies": {
+    "@types/lodash": "^4.14.63",
+    "@types/react": "^15.0.22",
+    "@types/react-dom": "^15.5.0",
+    "css-loader": "^0.28.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.3",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "^0.16.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.1",
+    "webpack": "^2.4.1"
+  },
+  "version": "0.0.1"
 }
