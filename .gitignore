@@ -1,8 +1,5 @@
-demos/**/bundle.js
-demos/**/bundle.js.map
-dist/
-dist/main.js
-dist/main.js.map
+demos/**/*.min.*
+dist
 
 # Created by https://www.gitignore.io/api/net,netbeans,sublimetext,phpstorm,windows,osx,node
 

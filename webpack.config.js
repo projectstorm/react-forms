@@ -1,9 +1,15 @@
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var WebpackNotifierPlugin = require('webpack-notifier');
+var CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+
 var plugins = [];
 
 //do we minify it all
 if(process.env.NODE_ENV === 'production'){
 	console.log("creating production build");
+	new CheckerPlugin(),
 	plugins.push(new webpack.optimize.UglifyJsPlugin({
 		mangle: {
 			keep_fnames: true
@@ -55,16 +61,16 @@ module.exports = [
 		module: {
 			rules: [
 				{
-					enforce: 'pre',
-					test: /\.js$/,
-					loader: "source-map-loader"
+					test: /\.scss$/,
+					use: ExtractTextPlugin.extract({
+						fallback: 'style-loader',
+						use: ['css-loader', 'sass-loader']
+					})
 				},
 				{
 					test: /\.tsx?$/,
-					loader: 'ts-loader?' + JSON.stringify({
-						configFileName: 'tsconfig.json'
-					})
-				}
+					loader: 'awesome-typescript-loader'
+				},
 			]
 		},
 		resolve: {
@@ -72,29 +78,31 @@ module.exports = [
 		},
 		devtool: process.env.NODE_ENV === 'production'?false:'cheap-source-map'
 	},
+
 	//for building the demos and tests
 	{
 		entry: {
-			'demo1/bundle.js': './demos/demo1/index.ts',
+			'demo1/min/bundle.min': './demos/demo1/index.ts',
 		},
 		output: {
-			filename: '[name]',
+			filename: '[name].js',
 			path: __dirname + '/demos',
 			libraryTarget: 'umd',
 			library: 'storm-react-forms'
 		},
-		plugins:plugins,
+		plugins:plugins.concat([
+			new WebpackNotifierPlugin({alwaysNotify: true}),
+			new ExtractTextPlugin({filename:'[name].css'}),
+			new LiveReloadPlugin()
+		]),
 		module: {
 			rules: [
 				{
 					test: /\.scss$/,
-					use: [{
-						loader: "style-loader" // creates style nodes from JS strings
-					}, {
-						loader: "css-loader" // translates CSS into CommonJS
-					}, {
-						loader: "sass-loader" // compiles Sass to CSS
-					}]
+					use: ExtractTextPlugin.extract({
+						fallback: 'style-loader',
+						use: ['css-loader', 'sass-loader']
+					})
 				},
 				{
 					enforce: 'pre',
@@ -103,18 +111,13 @@ module.exports = [
 				},
 				{
 					test: /\.tsx?$/,
-					loader: 'ts-loader?' + JSON.stringify({
-						configFileName: 'tsconfig.json',
-						compilerOptions: {
-							declaration:false
-						}
-					}),
-				}
+					loader: 'awesome-typescript-loader'
+				},
 			]
 		},
 		resolve: {
 			extensions: [".tsx", ".ts", ".js"]
 		},
-		devtool: process.env.NODE_ENV === 'production'?false:'cheap-source-map'
+		devtool: process.env.NODE_ENV === 'production'?false:'cheap-module-source-map'
 	}
 ];

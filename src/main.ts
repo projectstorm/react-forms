@@ -8,10 +8,12 @@ export * from "./core/FormWidget";
 export * from "./types/FieldElementWidget";
 export * from "./layout/TableLayoutWidget";
 
+import {BaseElementWidgetProps} from "./core/BaseElementWidget";
 import {FormGroupWidgetFactory,FormGroupWidget,FormGroupWidgetState,FormGroupWidgetProps} from "./core/FormGroupWidget";
 import {ButtonElementWidgetFactory,ButtonElementWidget,ButtonElementWidgetProps} from "./core/ButtonElementWidget";
 import {FormWidgetFactory,FormWidget,FormWidgetProps,FormWidgetState} from "./core/FormWidget";
 import {FieldElementWidgetFactory,FieldElementWidget,FieldElementWidgetProps,FieldElementWidgetState} from "./types/FieldElementWidget";
+import {SelectElementWidget,SelectElementWidgetFactory,SelectElementWidgetProps,SelectElementWidgetState} from "./types/SelectElementWidget";
 import {TableLayoutWidget,TableLayoutWidgetFactory,TableLayoutWidgetProps,TableLayoutWidgetState} from "./layout/TableLayoutWidget";
 
 
@@ -21,5 +23,6 @@ export var DOM = {
 	button: ButtonElementWidgetFactory,
 	form: FormWidgetFactory,
 	group:FormGroupWidgetFactory,
-	input: FieldElementWidgetFactory
+	input: FieldElementWidgetFactory,
+	select: SelectElementWidgetFactory
 };

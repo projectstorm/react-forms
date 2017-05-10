@@ -1,33 +1,33 @@
 import * as React from "react";
 
-export interface BaseElementWidgetProps{
-	name?: string;
-	value?: string|null;
-	valueChangedEvent?: (value: string) => any;
+export interface BaseElementWidgetProps<Type>{
+	name?: any;
+	value?: Type|null;
+	valueChangedEvent?: (value: Type) => any;
 	allowValueOverride?: boolean;
 	children?:any;
 	label?: any;
 	displayLabel?: boolean;
 }
 
-export interface BaseElementWidgetState{
-	value: string|null;
-	resetValue: string|null;
+export interface BaseElementWidgetState<Type>{
+	value: Type|null;
+	resetValue: Type|null;
 }
 
 /**
  * @author Dylan Vorster
  */
-export class BaseElementWidget<P,S> extends React.Component<BaseElementWidgetProps, BaseElementWidgetState> {
+export class BaseElementWidget<Type,P,S> extends React.Component<BaseElementWidgetProps<Type>, BaseElementWidgetState<Type>> {
 
-	public static defaultProps: BaseElementWidgetProps = {
+	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
 		value: null,
 		allowValueOverride: true,
 		displayLabel: true
 	};
 
-	constructor(props: BaseElementWidgetProps) {
+	constructor(props: BaseElementWidgetProps<Type>) {
 		super(props);
 		this.state = {
 			value: props.value,
@@ -40,7 +40,7 @@ export class BaseElementWidget<P,S> extends React.Component<BaseElementWidgetPro
 	 * @param props
 	 * @returns {any|string}
 	 */
-	static getLabel(props: BaseElementWidgetProps){
+	static getLabel(props: BaseElementWidgetProps<any>){
 		if(!props.displayLabel){
 			return null;
 		}
@@ -55,7 +55,7 @@ export class BaseElementWidget<P,S> extends React.Component<BaseElementWidgetPro
 		this.setValue(this.state.resetValue);
 	}
 
-	componentWillReceiveProps(prev: BaseElementWidgetProps,next: BaseElementWidgetProps){
+	componentWillReceiveProps(prev: BaseElementWidgetProps<Type>,next: BaseElementWidgetProps<Type>){
 		if(this.props.allowValueOverride && next.value){
 			this.setState({value: next.value});
 		}
@@ -71,10 +71,10 @@ export class BaseElementWidget<P,S> extends React.Component<BaseElementWidgetPro
 		return value;
 	}
 
-	setValue(value: string|null){
+	setValue(value: Type|null, fireEvent: boolean = true){
 		value = this.cleanValue(value);
 		this.setState({value: value},() => {
-			if(this.props.valueChangedEvent){
+			if(fireEvent && this.props.valueChangedEvent){
 				this.props.valueChangedEvent(value);
 			}
 		});

@@ -6,20 +6,20 @@ import {
 } from "./BaseElementWidget";
 import {ReactElement} from "../../../React Diagrams/node_modules/@types/react/index";
 
-export interface FormGroupWidgetProps extends BaseElementWidgetProps{
+export interface FormGroupWidgetProps extends BaseElementWidgetProps<any>{
 }
 
-export interface FormGroupWidgetState extends BaseElementWidgetState{
+export interface FormGroupWidgetState extends BaseElementWidgetState<any>{
 }
 
 /**
  * @author dylanvorster
  */
-export class FormGroupWidget extends BaseElementWidget<FormGroupWidgetProps, FormGroupWidgetState> {
+export class FormGroupWidget extends BaseElementWidget<any,FormGroupWidgetProps, FormGroupWidgetState> {
 
-	protected elements : {[name:string]: BaseElementWidget<BaseElementWidgetProps,BaseElementWidgetState>}
+	protected elements : {[name:string]: BaseElementWidget<any,BaseElementWidgetProps<any>,BaseElementWidgetState<any>>}
 
-	public static defaultProps: BaseElementWidgetProps = {
+	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
 		value: null,
 		allowValueOverride: true
@@ -42,19 +42,20 @@ export class FormGroupWidget extends BaseElementWidget<FormGroupWidgetProps, For
 		});
 	}
 
-	bindChildren(children){
+	bindChildren(children,nestLevel: number= 0){
 		this.elements = {};
-		return React.Children.map(children, (child: ReactElement<BaseElementWidgetProps>) => {
+		return React.Children.map(children, (child: ReactElement<BaseElementWidgetProps<any>>) => {
 
 			//string
 			if (!React.isValidElement(child)) {
 				return child;
 			}
-			var children = child.props.children;
+
+			var children = null;
 
 			//if its not a nested system we must go deeper
 			if (child.type !== FormGroupWidget && child.props.children) {
-				children = this.bindChildren(child.props.children);
+				children = this.bindChildren(child.props.children,nestLevel+1);
 			}
 
 			//bind the children (cant use instance of here because typescript|react is being stupid)

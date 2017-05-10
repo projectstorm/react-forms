@@ -3,6 +3,7 @@
 	"name": "storm-react-forms",
 	"compilerOptions": {
 		"suppressExcessPropertyErrors": true,
+		"declarationDir": "./dist/@types",
 		"declaration": true,
 		"target": "es5",
 		"sourceMap": true,
