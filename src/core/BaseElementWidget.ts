@@ -18,7 +18,7 @@ export interface BaseElementWidgetState<Type>{
 /**
  * @author Dylan Vorster
  */
-export class BaseElementWidget<Type,P,S> extends React.Component<BaseElementWidgetProps<Type>, BaseElementWidgetState<Type>> {
+export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S extends BaseElementWidgetState<Type>> extends React.Component<P, BaseElementWidgetState<Type>> {
 
 	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
@@ -27,7 +27,7 @@ export class BaseElementWidget<Type,P,S> extends React.Component<BaseElementWidg
 		displayLabel: true
 	};
 
-	constructor(props: BaseElementWidgetProps<Type>) {
+	constructor(props: P) {
 		super(props);
 		this.state = {
 			value: props.value,

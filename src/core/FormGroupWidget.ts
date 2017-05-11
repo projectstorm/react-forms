@@ -4,7 +4,7 @@ import {
 	BaseElementWidget, BaseElementWidgetFactory, BaseElementWidgetProps,
 	BaseElementWidgetState
 } from "./BaseElementWidget";
-import {ReactElement} from "../../../React Diagrams/node_modules/@types/react/index";
+import {ReactElement} from "react";
 
 export interface FormGroupWidgetProps extends BaseElementWidgetProps<any>{
 }
