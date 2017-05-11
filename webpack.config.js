@@ -3,6 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var WebpackNotifierPlugin = require('webpack-notifier');
 var CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 var LiveReloadPlugin = require('webpack-livereload-plugin');
+var nodeExternals = require('webpack-node-externals');
 
 var plugins = [];
 
@@ -37,26 +38,7 @@ module.exports = [
 			libraryTarget: 'umd',
 			library: 'storm-react-forms'
 		},
-		externals: {
-			react: {
-				root: 'React',
-				commonjs2: 'react',
-				commonjs: 'react',
-				amd: 'react'
-			},
-			'react-dom': {
-				root: 'ReactDOM',
-				commonjs2: 'react-dom',
-				commonjs: 'react-dom',
-				amd: 'react-dom'
-			},
-			"lodash": {
-				commonjs: 'lodash',
-				commonjs2: 'lodash',
-				amd: '_',
-				root: '_'
-			}
-		},
+		externals: [nodeExternals()],
 		plugins:plugins,
 		module: {
 			rules: [
@@ -76,7 +58,7 @@ module.exports = [
 		resolve: {
 			extensions: [".tsx", ".ts", ".js"]
 		},
-		devtool: process.env.NODE_ENV === 'production'?false:'cheap-source-map'
+		devtool: process.env.NODE_ENV === 'production'?false:'cheap-module-source-map'
 	},
 
 	//for building the demos and tests
@@ -93,7 +75,7 @@ module.exports = [
 		plugins:plugins.concat([
 			new WebpackNotifierPlugin({alwaysNotify: true}),
 			new ExtractTextPlugin({filename:'[name].css'}),
-			new LiveReloadPlugin()
+			new LiveReloadPlugin({port: 35729})
 		]),
 		module: {
 			rules: [
