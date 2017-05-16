@@ -1,7 +1,7 @@
 import * as React from "react";
 import {ButtonElementWidgetFactory} from "./ButtonElementWidget";
 import {FormGroupWidget, FormGroupWidgetFactory} from "./FormGroupWidget";
-import {ReactElement} from "../../../React Diagrams/node_modules/@types/react/index";
+import {ReactElement} from "react";
 
 export interface FormWidgetProps{
 	formSubmitEvent?: (model: any) => any;
