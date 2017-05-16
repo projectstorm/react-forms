@@ -31,7 +31,7 @@ export class TableLayoutWidget extends React.Component<TableLayoutWidgetProps, T
 						if(label){
 							return (
 								React.DOM.tr({},
-									React.DOM.td({},label),
+									React.DOM.td({},React.DOM.label(null,label)),
 									React.DOM.td({},child)
 								)
 							);

@@ -44,6 +44,8 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 		//only add the value if its valid
 		if(this.getValue()){
 			props['value'] = this.getValue();
+		}else{
+			props['value'] = "";
 		}
 
 		return (
