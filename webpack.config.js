@@ -35,7 +35,7 @@ module.exports = [
 			filename: 'main.js',
 			path: __dirname + '/dist',
 			libraryTarget: 'umd',
-			library: 'storm-react-forms'
+			library: 'SRF'
 		},
 		externals: {
 			react: {
