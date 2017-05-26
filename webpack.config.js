@@ -3,7 +3,6 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var WebpackNotifierPlugin = require('webpack-notifier');
 var CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 var LiveReloadPlugin = require('webpack-livereload-plugin');
-var nodeExternals = require('webpack-node-externals');
 
 var plugins = [];
 
@@ -38,7 +37,26 @@ module.exports = [
 			libraryTarget: 'umd',
 			library: 'storm-react-forms'
 		},
-		externals: [nodeExternals()],
+		externals: {
+			react: {
+				root: 'React',
+				commonjs2: 'react',
+				commonjs: 'react',
+				amd: 'react'
+			},
+			'react-dom': {
+				root: 'ReactDOM',
+				commonjs2: 'react-dom',
+				commonjs: 'react-dom',
+				amd: 'react-dom'
+			},
+			"lodash": {
+				commonjs: 'lodash',
+				commonjs2: 'lodash',
+				amd: '_',
+				root: '_'
+			}
+		},
 		plugins:plugins,
 		module: {
 			rules: [
