@@ -1,18 +1,36 @@
 import * as React from "react";
+import * as _ from "lodash";
+import * as PropTypes from 'prop-types';
 import {BaseElementWidget,BaseElementWidgetProps,BaseElementWidgetState} from "../core/BaseElementWidget";
+import {FormContext} from "../core/FormWidget";
 
 export interface FieldElementWidgetProps extends BaseElementWidgetProps<string>{
 	placeholder?: string;
 	livetype?: boolean;
+	submitOnEnter?: boolean;
 }
 
 export interface FieldElementWidgetState extends BaseElementWidgetState<string>{
 }
 
+
+
 /**
  * @author dylanvorster
  */
 export class FieldElementWidget extends BaseElementWidget<string,FieldElementWidgetProps, FieldElementWidgetState> {
+
+	context: FormContext;
+
+	static contextTypes = {
+		form: PropTypes.any
+	}
+
+	public static defaultProps: FieldElementWidgetProps = _.extend(BaseElementWidget.defaultProps,{
+		submitOnEnter: false,
+		livetype: false,
+	}) ;
+
 
 	constructor(props: FieldElementWidgetProps){
 		super(props);
@@ -20,23 +38,25 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 
 	render() {
 
-		var livetype = true;
-		if(typeof (this.props as FieldElementWidgetProps).livetype === 'boolean'){
-			livetype = (this.props as FieldElementWidgetProps).livetype;
-		}
-
 		var props = {
 			className: "storm-field",
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
 			onChange: (event) => {
-				this.setValue(event.target.value,livetype);
+				this.setValue(event.target.value,this.props.livetype);
 			}
 		};
 
-		if(!livetype){
-			props['onKeyPress'] = (event) => {
-				if (event.key === 'Enter' && this.props.valueChangedEvent){
+		props['onKeyPress'] = (event) => {
+			if (event.key === 'Enter'){
+
+				//livetype
+				if(this.props.livetype && this.props.valueChangedEvent){
 					this.props.valueChangedEvent(this.state.value);
+				}
+
+				//enter button is used t submit form
+				if(this.props.submitOnEnter){
+					this.context.form.fireFormSubmitEvent();
 				}
 			}
 		}

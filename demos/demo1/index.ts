@@ -38,7 +38,7 @@ window.onload = () => {
 					SRF.DOM.input({name:'field1',valueChangedEvent:(val)=> {
 						console.log(val);
 					}}),
-					SRF.DOM.input({name:'field2'})
+					SRF.DOM.input({name:'field2',submitOnEnter: true})
 				)
 			),
 		),

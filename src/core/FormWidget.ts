@@ -2,6 +2,7 @@ import * as React from "react";
 import {ButtonElementWidgetFactory} from "./ButtonElementWidget";
 import {FormGroupWidget, FormGroupWidgetFactory} from "./FormGroupWidget";
 import {ReactElement} from "react";
+import * as PropTypes from 'prop-types';
 
 export interface FormWidgetProps{
 	formSubmitEvent?: (model: any) => any;
@@ -20,12 +21,20 @@ export interface FormWidgetProps{
 export interface FormWidgetState{
 }
 
+export interface FormContext{
+	form: FormWidget;
+}
+
 /**
  * @author Dylan Vorster
  */
 export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState> {
 
 	rootGroup: FormGroupWidget;
+
+	static childContextTypes = {
+		form: PropTypes.any
+	}
 
 	public static defaultProps: FormWidgetProps = {
 		showReset: true,
@@ -38,6 +47,14 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 		super(props);
 		this.state = {
 		}
+	}
+
+	fireFormSubmitEvent(){
+		this.props.formSubmitEvent(this.rootGroup.getValue());
+	}
+
+	getChildContext(): FormContext {
+		return { form: this };
 	}
 
 	getChildren(): ReactElement<any>{
@@ -65,7 +82,7 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 					//submit button
 					this.props.showSubmit?
 						ButtonElementWidgetFactory({name:this.props.submitButton,action:() => {
-							this.props.formSubmitEvent(this.rootGroup.getValue());
+							this.fireFormSubmitEvent();
 						}}):null,
 
 					//reset button

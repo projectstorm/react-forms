@@ -55,6 +55,12 @@ module.exports = [
 				commonjs2: 'lodash',
 				amd: '_',
 				root: '_'
+			},
+			"prop-types":{
+				commonjs:'prop-types',
+				commonjs2:'prop-types',
+				amd: 'PropTypes',
+				root: 'PropTypes'
 			}
 		},
 		plugins:plugins,

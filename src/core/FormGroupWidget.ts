@@ -42,7 +42,7 @@ export class FormGroupWidget extends BaseElementWidget<any,FormGroupWidgetProps,
 		});
 	}
 
-	bindChildren(children,nestLevel: number= 0){
+	bindChildren(children){
 		this.elements = {};
 		return React.Children.map(children, (child: ReactElement<BaseElementWidgetProps<any>>) => {
 
@@ -55,7 +55,7 @@ export class FormGroupWidget extends BaseElementWidget<any,FormGroupWidgetProps,
 
 			//if its not a nested system we must go deeper
 			if (child.type !== FormGroupWidget && child.props.children) {
-				children = this.bindChildren(child.props.children,nestLevel+1);
+				children = this.bindChildren(child.props.children);
 			}
 
 			//bind the children (cant use instance of here because typescript|react is being stupid)
