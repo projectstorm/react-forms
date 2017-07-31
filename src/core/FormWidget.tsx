@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ButtonElementWidgetFactory} from "./ButtonElementWidget";
+import {ButtonElementWidget} from "./ButtonElementWidget";
 import {FormGroupWidget, FormGroupWidgetFactory} from "./FormGroupWidget";
 import {ReactElement} from "react";
 import * as PropTypes from 'prop-types';
@@ -72,26 +72,21 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 
 	render() {
 		return (
-			React.DOM.form({className: "storm-form"},
-
-				this.getChildren(),
-
-				//render the bittons
-				React.DOM.div({className:'buttons'},
-
-					//submit button
-					this.props.showSubmit?
-						ButtonElementWidgetFactory({name:this.props.submitButton,action:() => {
+			<form className="storm-form">
+				{this.getChildren()}
+				<div className="storm-form__buttons">
+					{
+						this.props.showSubmit && <ButtonElementWidget name={this.props.submitButton} action={() => {
 							this.fireFormSubmitEvent();
-						}}):null,
-
-					//reset button
-					this.props.showReset?
-						ButtonElementWidgetFactory({name:this.props.resetButton,action:() => {
+						}}/>
+					}
+					{
+						this.props.showReset && <ButtonElementWidget name={this.props.resetButton} action={() => {
 							this.rootGroup.resetValue();
-						}}):null
-				)
-			)
+						}}/>
+					}
+				</div>
+			</form>
 		);
 	}
 }

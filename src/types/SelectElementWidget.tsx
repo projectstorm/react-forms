@@ -36,14 +36,25 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		}
 
 		return (
-			React.DOM.select(props,Object.keys((this.props as SelectElementWidgetProps).groups).map((group) => {
-				//render the groups
-				return React.DOM.optgroup({label:group,key:group},_.keys((this.props as SelectElementWidgetProps).groups[group]).map((key) => {
-
-					//render each option
-					return React.DOM.option({value:key,key:key},(this.props as SelectElementWidgetProps).groups[group][key]);
-				}));
-			}))
+			<select {...props}>
+				{
+					//render the groups
+					_.keys((this.props as SelectElementWidgetProps).groups).map((group) => {
+						return (
+							<optgroup label={group} key={group}>
+								{
+									//render each option
+									_.keys((this.props as SelectElementWidgetProps).groups[group]).map((key) => {
+										return (
+											<option value={key} key={key}>{(this.props as SelectElementWidgetProps).groups[group][key]}</option>
+										);
+									})
+								}
+							</optgroup>
+						);
+					})
+				}
+			</select>
 		);
 	}
 }

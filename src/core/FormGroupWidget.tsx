@@ -73,9 +73,9 @@ export class FormGroupWidget extends BaseElementWidget<any,FormGroupWidgetProps,
 
 	render() {
 		return (
-			React.DOM.div({className: "group"},
-				this.bindChildren(this.props.children)
-			)
+			<div className="storm-group">
+				{this.bindChildren(this.props.children)}
+			</div>
 		);
 	}
 }

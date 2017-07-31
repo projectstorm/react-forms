@@ -69,7 +69,7 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 		}
 
 		return (
-			React.DOM.input(props)
+			<input {...props} />
 		);
 	}
 }

@@ -55,7 +55,7 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 		this.setValue(this.state.resetValue);
 	}
 
-	componentWillReceiveProps(prev: BaseElementWidgetProps<Type>,next: BaseElementWidgetProps<Type>){
+	componentWillReceiveProps(prev,next){
 		if(this.props.allowValueOverride && next.value){
 			this.setState({value: next.value});
 		}

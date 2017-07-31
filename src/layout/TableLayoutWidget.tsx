@@ -24,27 +24,29 @@ export class TableLayoutWidget extends React.Component<TableLayoutWidgetProps, T
 
 	render() {
 		return (
-			React.DOM.table(this.props,
-				React.DOM.tbody(null,
-					React.Children.map(this.props.children,(child: ReactElement<any>) => {
-						var label = BaseElementWidget.getLabel(child.props);
-						if(label){
-							return (
-								React.DOM.tr({},
-									React.DOM.td({},React.DOM.label(null,label)),
-									React.DOM.td({},child)
-								)
-							);
-						}
+			<table>
+				<tbody>
+					{
+						React.Children.map(this.props.children,(child: JSX.Element) => {
+							var label = BaseElementWidget.getLabel(child.props);
+							if(label){
+								return (
+									<tr>
+										<td><label>{label}</label></td>
+										<td>{child}</td>
+									</tr>
+								);
+							}
 
-						return(
-							React.DOM.tr({},
-								React.DOM.td({colSpan:2}, child)
-							)
-						);
-					})
-				)
-			)
+							return(
+								<tr>
+									<td colSpan={2}>{child}</td>
+								</tr>
+							);
+						})
+					}
+				</tbody>
+			</table>
 		);
 	}
 }

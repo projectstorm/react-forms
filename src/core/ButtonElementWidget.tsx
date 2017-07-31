@@ -20,12 +20,7 @@ export class ButtonElementWidget extends React.Component<ButtonElementWidgetProp
 	}
 
 	render() {
-		return React.DOM.input({
-			className:"storm-button",
-			type:"button",
-			value:this.props.name,
-			onClick: this.props.action
-		});
+		return <input type="button" className="storm-button" value={this.props.name} onClick={ this.props.action}/>
 	}
 }
 
