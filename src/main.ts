@@ -6,9 +6,9 @@ export * from "./core/FormGroupWidget";
 export * from "./core/ButtonElementWidget";
 export * from "./core/FormWidget";
 export * from "./types/FieldElementWidget";
+export * from "./types/SelectElementWidget";
 export * from "./layout/TableLayoutWidget";
 
-import {BaseElementWidgetProps} from "./core/BaseElementWidget";
 import {FormGroupWidgetFactory,FormGroupWidget,FormGroupWidgetState,FormGroupWidgetProps} from "./core/FormGroupWidget";
 import {ButtonElementWidgetFactory,ButtonElementWidget,ButtonElementWidgetProps} from "./core/ButtonElementWidget";
 import {FormWidgetFactory,FormWidget,FormWidgetProps,FormWidgetState} from "./core/FormWidget";
