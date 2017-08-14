@@ -15,7 +15,7 @@ export interface FormWidgetProps{
 	submitButton?: string;
 	resetButton?: string;
 
-	children?: ReactElement<any>;
+	children?: JSX.Element | JSX.Element[];
 }
 
 export interface FormWidgetState{
@@ -49,8 +49,12 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 		}
 	}
 
-	fireFormSubmitEvent(){
-		this.props.formSubmitEvent(this.rootGroup.getValue());
+	fireFormSubmitEvent(action?: (model: any) => any) {
+		if(action){
+			return action(this.rootGroup.getValue());
+		}else{
+			return this.props.formSubmitEvent(this.rootGroup.getValue());
+		}
 	}
 
 	getChildContext(): FormContext {
@@ -58,12 +62,14 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 	}
 
 	getChildren(): ReactElement<any>{
-		if(this.props.children.type instanceof FormGroupWidget){
-			return React.cloneElement( this.props.children,{
-				ref: (element) => {
-					this.rootGroup = element;
-				}
-			});
+		if(React.isValidElement(this.props.children)){
+			if(this.props.children.type instanceof FormGroupWidget){
+				return React.cloneElement( this.props.children,{
+					ref: (element) => {
+						this.rootGroup = element;
+					}
+				});
+			}
 		}
 		return FormGroupWidgetFactory({name:"",ref: (element) => {
 			this.rootGroup = element;

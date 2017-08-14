@@ -88,6 +88,7 @@ module.exports = [
 	//for building the demos and tests
 	{
 		entry: {
+			// add additional demos here
 			'demo1/min/bundle.min': './demos/demo1/index.ts',
 		},
 		output: {

@@ -8,6 +8,7 @@ export interface FieldElementWidgetProps extends BaseElementWidgetProps<string>{
 	placeholder?: string;
 	livetype?: boolean;
 	submitOnEnter?: boolean;
+	type?: string;
 }
 
 export interface FieldElementWidgetState extends BaseElementWidgetState<string>{
