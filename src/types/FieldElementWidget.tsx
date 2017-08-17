@@ -40,6 +40,8 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 	render() {
 
 		var props = {
+			...this.props,
+
 			className: "storm-field",
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
 			onChange: (event) => {
