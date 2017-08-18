@@ -62,6 +62,9 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 		props['onKeyPress'] = (event) => {
 			if (event.key === 'Enter'){
 
+				//dont reload the page
+				event.preventDefault();
+
 				//livetype
 				if(this.props.livetype && this.props.valueChangedEvent){
 					this.props.valueChangedEvent(this.state.value);
