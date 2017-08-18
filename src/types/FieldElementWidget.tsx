@@ -37,10 +37,20 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 		super(props);
 	}
 
+	filterOutProps(props: string[]){
+		var filteredProps = {};
+		for(var i in this.props){
+			if(props.indexOf(i) === -1){
+				filteredProps[i] = this.props[i];
+			}
+		}
+		return filteredProps;
+	}
+
 	render() {
 
 		var props = {
-			...this.props,
+			... this.filterOutProps(['submitOnEnter','livetype','valueChangedEvent','allowValueOverride','displayLabel']),
 
 			className: "storm-field",
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
@@ -57,8 +67,8 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 					this.props.valueChangedEvent(this.state.value);
 				}
 
-				//enter button is used t submit form
-				if(this.props.submitOnEnter){
+				//enter button is used to submit form
+				if(this.props.submitOnEnter && this.context.form){
 					this.context.form.fireFormSubmitEvent();
 				}
 			}
