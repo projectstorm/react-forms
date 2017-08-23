@@ -78,7 +78,7 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 
 	render() {
 		return (
-			<form className="storm-form">
+			<form autoComplete="off" className="storm-form">
 				{this.getChildren()}
 				<div className="storm-form__buttons">
 					{

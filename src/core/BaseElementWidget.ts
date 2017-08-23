@@ -22,7 +22,6 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 
 	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
-		value: null,
 		allowValueOverride: true,
 		displayLabel: true
 	};
@@ -30,8 +29,8 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 	constructor(props: P) {
 		super(props);
 		this.state = {
-			value: props.value,
-			resetValue: props.value
+			value: props.value || null,
+			resetValue: props.value || null
 		}
 	}
 
@@ -56,8 +55,8 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 	}
 
 	componentWillReceiveProps(next){
-		if(this.props.allowValueOverride && next.value){
-			this.setState({value: next.value});
+		if(this.props.allowValueOverride && next.value !== undefined){
+			this.setValue(next.value,false);
 		}
 	}
 

@@ -14,8 +14,6 @@ export interface FieldElementWidgetProps extends BaseElementWidgetProps<string>{
 export interface FieldElementWidgetState extends BaseElementWidgetState<string>{
 }
 
-
-
 /**
  * @author dylanvorster
  */
@@ -75,7 +73,7 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 					this.context.form.fireFormSubmitEvent();
 				}
 			}
-		}
+		};
 
 		//only add the value if its valid
 		if(this.getValue()){
