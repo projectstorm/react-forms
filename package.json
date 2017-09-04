@@ -36,7 +36,7 @@
     "sass-loader": "^6.0.6",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
-    "typescript": "^2.4.2",
+    "typescript": "^2.5.2",
     "webpack": "^3.4.1",
     "webpack-livereload-plugin": "^0.11.0",
     "webpack-node-externals": "^1.6.0",

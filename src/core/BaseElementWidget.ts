@@ -18,7 +18,7 @@ export interface BaseElementWidgetState<Type>{
 /**
  * @author Dylan Vorster
  */
-export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S extends BaseElementWidgetState<Type>> extends React.Component<P, BaseElementWidgetState<Type>> {
+export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S extends BaseElementWidgetState<Type>> extends React.Component<P, S> {
 
 	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
@@ -26,9 +26,11 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 		displayLabel: true
 	};
 
+	state: S;
+
 	constructor(props: P) {
 		super(props);
-		this.state = {
+		(this.state as any) = {
 			value: props.value || null,
 			resetValue: props.value || null
 		}
@@ -70,9 +72,9 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 		return value;
 	}
 
-	setValue(value: Type|null, fireEvent: boolean = true){
+	setValue(value: Type|null, fireEvent: boolean = true, additionalState: any = {}){
 		value = this.cleanValue(value);
-		this.setState({value: value},() => {
+		this.setState({...additionalState, value: value},() => {
 			if(fireEvent && this.props.valueChangedEvent){
 				this.props.valueChangedEvent(value);
 			}
