@@ -9,6 +9,7 @@ export interface FieldElementWidgetProps extends BaseElementWidgetProps<string>{
 	livetype?: boolean;
 	submitOnEnter?: boolean;
 	type?: string;
+	autoComplete?: any;
 }
 
 export interface FieldElementWidgetState extends BaseElementWidgetState<string>{
@@ -35,27 +36,21 @@ export class FieldElementWidget extends BaseElementWidget<string,FieldElementWid
 		super(props);
 	}
 
-	filterOutProps(props: string[]){
-		var filteredProps = {};
-		for(var i in this.props){
-			if(props.indexOf(i) === -1){
-				filteredProps[i] = this.props[i];
-			}
-		}
-		return filteredProps;
-	}
-
 	render() {
 
 		var props = {
-			... this.filterOutProps(['submitOnEnter','livetype','valueChangedEvent','allowValueOverride','displayLabel']),
-
+			... this.props,
 			className: "storm-field",
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
 			onChange: (event) => {
 				this.setValue(event.target.value,this.props.livetype);
 			}
 		};
+
+		// fix for autocomplete
+		if(this.props.autoComplete === "off" && this.props.type === "password"){
+			props['autoComplete'] = "new-password";
+		}
 
 		props['onKeyPress'] = (event) => {
 			if (event.key === 'Enter'){
