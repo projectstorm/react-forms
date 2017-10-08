@@ -15,6 +15,7 @@ import {FormWidgetFactory,FormWidget,FormWidgetProps,FormWidgetState} from "./co
 import {FieldElementWidgetFactory,FieldElementWidget,FieldElementWidgetProps,FieldElementWidgetState} from "./types/FieldElementWidget";
 import {SelectElementWidget,SelectElementWidgetFactory,SelectElementWidgetProps,SelectElementWidgetState} from "./types/SelectElementWidget";
 import {TableLayoutWidget,TableLayoutWidgetFactory,TableLayoutWidgetProps,TableLayoutWidgetState} from "./layout/TableLayoutWidget";
+import {CheckboxElementWidgetFactory,CheckboxElementWidget,CheckboxElementWidgetProps,CheckboxElementWidgetState} from "./types/CheckboxElementWidget";
 
 
 //export these as convenience methods
@@ -24,5 +25,6 @@ export var DOM = {
 	form: FormWidgetFactory,
 	group:FormGroupWidgetFactory,
 	input: FieldElementWidgetFactory,
-	select: SelectElementWidgetFactory
+	select: SelectElementWidgetFactory,
+	checkbox: CheckboxElementWidgetFactory
 };
