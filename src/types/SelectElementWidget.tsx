@@ -30,6 +30,13 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		//compute the new set of options
 		let options = this.getOptions(props.groups);
 
+
+		let value = this.state.value;
+		if(value === null || (props.allowValueOverride && props.value !== undefined)){
+			value = props.value;
+		}
+
+
 		//try find the state value in the set
 		let foundValue = false;
 		let possibleOption = null;
@@ -37,7 +44,7 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		for(let i in this.props.groups){
 			for(let j in this.props.groups[i]){
 				possibleOption =  possibleOption || j;
-				if(j === this.state.value){
+				if(j === value){
 					foundValue = true;
 					break loop;
 				}
@@ -45,7 +52,7 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		}
 
 		let newState = {
-			value: this.state.value,
+			value: value,
 			resetValue: this.state.resetValue,
 			groups: options
 		};
