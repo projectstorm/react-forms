@@ -1,5 +1,4 @@
 import * as React from "react";
-import {ReactElement} from "../../../React Diagrams/node_modules/@types/react/index";
 import {BaseElementWidget} from "../core/BaseElementWidget";
 
 export interface TableLayoutWidgetProps{
@@ -12,9 +11,6 @@ export interface TableLayoutWidgetState{
  * @author dylanvorster
  */
 export class TableLayoutWidget extends React.Component<TableLayoutWidgetProps, TableLayoutWidgetState> {
-
-	public static defaultProps: TableLayoutWidgetProps = {
-	};
 
 	constructor(props: TableLayoutWidgetProps){
 		super(props);
