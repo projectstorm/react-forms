@@ -27,104 +27,58 @@ if(process.env.NODE_ENV === 'production'){
 /**
  * @author Dylan Vorster
  */
-module.exports = [
-	//for building the umd distribution
-	{
-		entry: './src/main.ts',
-		output: {
-			filename: 'main.js',
-			path: __dirname + '/dist',
-			libraryTarget: 'umd',
-			library: 'SRF'
-		},
-		externals: {
-			react: {
-				root: 'React',
-				commonjs2: 'react',
-				commonjs: 'react',
-				amd: 'react'
-			},
-			'react-dom': {
-				root: 'ReactDOM',
-				commonjs2: 'react-dom',
-				commonjs: 'react-dom',
-				amd: 'react-dom'
-			},
-			"lodash": {
-				commonjs: 'lodash',
-				commonjs2: 'lodash',
-				amd: '_',
-				root: '_'
-			},
-			"prop-types":{
-				commonjs:'prop-types',
-				commonjs2:'prop-types',
-				amd: 'PropTypes',
-				root: 'PropTypes'
-			}
-		},
-		plugins:plugins,
-		module: {
-			rules: [
-				{
-					test: /\.scss$/,
-					use: ExtractTextPlugin.extract({
-						fallback: 'style-loader',
-						use: ['css-loader', 'sass-loader']
-					})
-				},
-				{
-					test: /\.tsx?$/,
-					loader: 'awesome-typescript-loader'
-				},
-			]
-		},
-		resolve: {
-			extensions: [".tsx", ".ts", ".js"]
-		},
-		devtool: process.env.NODE_ENV === 'production'?false:'cheap-module-source-map'
+module.exports = {
+	entry: './src/main.ts',
+	output: {
+		filename: 'main.js',
+		path: __dirname + '/dist',
+		libraryTarget: 'umd',
+		library: 'SRF'
 	},
-
-	//for building the demos and tests
-	{
-		entry: {
-			// add additional demos here
-			'demo1/min/bundle.min': './demos/demo1/index.ts',
+	externals: {
+		react: {
+			root: 'React',
+			commonjs2: 'react',
+			commonjs: 'react',
+			amd: 'react'
 		},
-		output: {
-			filename: '[name].js',
-			path: __dirname + '/demos',
-			libraryTarget: 'umd',
-			library: 'storm-react-forms'
+		'react-dom': {
+			root: 'ReactDOM',
+			commonjs2: 'react-dom',
+			commonjs: 'react-dom',
+			amd: 'react-dom'
 		},
-		plugins:plugins.concat([
-			new WebpackNotifierPlugin({alwaysNotify: true}),
-			new ExtractTextPlugin({filename:'[name].css'}),
-			new LiveReloadPlugin({port: 35729})
-		]),
-		module: {
-			rules: [
-				{
-					test: /\.scss$/,
-					use: ExtractTextPlugin.extract({
-						fallback: 'style-loader',
-						use: ['css-loader', 'sass-loader']
-					})
-				},
-				{
-					enforce: 'pre',
-					test: /\.js$/,
-					loader: "source-map-loader"
-				},
-				{
-					test: /\.tsx?$/,
-					loader: 'awesome-typescript-loader'
-				},
-			]
+		"lodash": {
+			commonjs: 'lodash',
+			commonjs2: 'lodash',
+			amd: '_',
+			root: '_'
 		},
-		resolve: {
-			extensions: [".tsx", ".ts", ".js"]
-		},
-		devtool: process.env.NODE_ENV === 'production'?false:'cheap-module-source-map'
-	}
-];
+		"prop-types":{
+			commonjs:'prop-types',
+			commonjs2:'prop-types',
+			amd: 'PropTypes',
+			root: 'PropTypes'
+		}
+	},
+	plugins:plugins,
+	module: {
+		rules: [
+			{
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: ['css-loader', 'sass-loader']
+				})
+			},
+			{
+				test: /\.tsx?$/,
+				loader: 'awesome-typescript-loader'
+			},
+		]
+	},
+	resolve: {
+		extensions: [".tsx", ".ts", ".js"]
+	},
+	devtool: process.env.NODE_ENV === 'production'?false:'cheap-module-source-map'
+}
