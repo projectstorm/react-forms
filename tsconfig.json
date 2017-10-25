@@ -2,6 +2,7 @@
 	"compileOnSave": false,
 	"name": "storm-react-forms",
 	"compilerOptions": {
+		"baseUrl": "./src",
 		"suppressExcessPropertyErrors": true,
 		"declarationDir": "./dist/@types",
 		"declaration": true,

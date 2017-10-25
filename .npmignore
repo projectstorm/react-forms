@@ -1,6 +1,6 @@
 demos/**/bundle.js
 demos/**/bundle.js.map
-./src
+src
 
 # Created by https://www.gitignore.io/api/net,netbeans,sublimetext,phpstorm,windows,osx,node
 
