@@ -1,7 +1,7 @@
 {
   "name": "storm-react-forms",
   "main": "./dist/main.js",
-  "typings": "./dist/@types/src/main",
+  "typings": "./dist/@types/main",
   "repository": {
     "type": "git",
     "url": "https://github.com/projectstorm/react-forms.git"
