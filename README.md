@@ -8,8 +8,8 @@ A super simple, no-nonsense form library written in React that (hopefully) just 
 [![NPM](https://img.shields.io/npm/v/storm-react-forms.svg)](https://npmjs.org/package/storm-react-forms)
 [![NPM](https://img.shields.io/npm/dt/storm-react-forms.svg)](https://npmjs.org/package/storm-react-forms)
 
-![Demo2](./images/example1.png)
+(Please note that this library is a work in progress)
 
-![Demo2](./images/example2.png)
+## Usage
 
-![Demo2](./images/example3.png)
+Take a look at the demos URL as well as the demos folder (docs will follow soon)
