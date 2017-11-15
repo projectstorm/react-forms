@@ -87,6 +87,7 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 	render() {
 		var props = {
 			className: "storm-select",
+			...this.props,
 			onChange: (event) => {
 				this.setValue(event.target.value);
 			}
