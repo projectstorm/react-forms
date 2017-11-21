@@ -1,0 +1,1569 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Binded Forms Binded Form 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "rgb(255, 255, 255)",
+      "bottom": 0,
+      "display": "flex",
+      "flexDirection": "column",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "boxSizing": "border-box",
+        "flex": 1,
+        "margin": 50,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "border": "solid 1px rgba(0, 0, 0, 0.0)",
+            "boxSizing": "border-box",
+            "height": "auto",
+            "position": "relative",
+            "width": "auto",
+          }
+        }
+      >
+        <form
+          autoComplete="off"
+          className="storm-form"
+          formSubmitEvent={[Function]}
+          resetButton="Reset"
+          showReset={true}
+          showSubmit={true}
+          submitButton="Submit"
+          value={
+            Object {
+              "Name": "Dylan",
+              "Surname": "Vorster",
+            }
+          }
+        >
+          <div
+            allowValueOverride={true}
+            className="storm-group"
+            name=""
+            value={
+              Object {
+                "Name": "Dylan",
+                "Surname": "Vorster",
+              }
+            }
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>
+                      Name
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Name"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Name"
+                      submitOnEnter={false}
+                      value="Dylan"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      Surname
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Surname"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Surname"
+                      submitOnEnter={false}
+                      value="Vorster"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            className="storm-form__buttons"
+          >
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Submit"
+            />
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Reset"
+            />
+          </div>
+        </form>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": undefined,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": "auto",
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": "auto",
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 5,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": undefined,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 5,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Binded Forms Binded Form 2 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "rgb(255, 255, 255)",
+      "bottom": 0,
+      "display": "flex",
+      "flexDirection": "column",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "boxSizing": "border-box",
+        "flex": 1,
+        "margin": 50,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "border": "solid 1px rgba(0, 0, 0, 0.0)",
+            "boxSizing": "border-box",
+            "height": "auto",
+            "position": "relative",
+            "width": "auto",
+          }
+        }
+      >
+        <form
+          autoComplete="off"
+          className="storm-form"
+          formSubmitEvent={[Function]}
+          resetButton="Reset"
+          showReset={true}
+          showSubmit={true}
+          submitButton="Submit"
+        >
+          <div
+            allowValueOverride={true}
+            className="storm-group"
+            name=""
+            value={null}
+          >
+            <div
+              allowValueOverride={true}
+              className="storm-group"
+              name=""
+              value={
+                Object {
+                  "Name": "Dylan",
+                  "Surname": "Vorster",
+                }
+              }
+            >
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label>
+                        Name
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        allowValueOverride={true}
+                        className="storm-field"
+                        displayLabel={true}
+                        livetype={false}
+                        name="Name"
+                        onChange={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Name"
+                        submitOnEnter={false}
+                        value="Dylan"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        Surname
+                      </label>
+                    </td>
+                    <td>
+                      <input
+                        allowValueOverride={true}
+                        className="storm-field"
+                        displayLabel={true}
+                        livetype={false}
+                        name="Surname"
+                        onChange={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Surname"
+                        submitOnEnter={false}
+                        value="Vorster"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div
+            className="storm-form__buttons"
+          >
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Submit"
+            />
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Reset"
+            />
+          </div>
+        </form>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": undefined,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": "auto",
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": "auto",
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 5,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": undefined,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 5,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Forms Custom Buttons 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "rgb(255, 255, 255)",
+      "bottom": 0,
+      "display": "flex",
+      "flexDirection": "column",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "boxSizing": "border-box",
+        "flex": 1,
+        "margin": 50,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "border": "solid 1px rgba(0, 0, 0, 0.0)",
+            "boxSizing": "border-box",
+            "height": "auto",
+            "position": "relative",
+            "width": "auto",
+          }
+        }
+      >
+        <form
+          autoComplete="off"
+          className="storm-form"
+          formSubmitEvent={[Function]}
+          resetButton="custom reset button"
+          showReset={true}
+          showSubmit={true}
+          submitButton="Save Form"
+        >
+          <div
+            allowValueOverride={true}
+            className="storm-group"
+            name=""
+            value={null}
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>
+                      Name
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Name"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Name"
+                      submitOnEnter={false}
+                      value=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      Surname
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Surname"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Surname"
+                      submitOnEnter={false}
+                      value=""
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            className="storm-form__buttons"
+          >
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Save Form"
+            />
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="custom reset button"
+            />
+          </div>
+        </form>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": undefined,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": "auto",
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": "auto",
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 5,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": undefined,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 5,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Forms Simple Form 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "rgb(255, 255, 255)",
+      "bottom": 0,
+      "display": "flex",
+      "flexDirection": "column",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "boxSizing": "border-box",
+        "flex": 1,
+        "margin": 50,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "border": "solid 1px rgba(0, 0, 0, 0.0)",
+            "boxSizing": "border-box",
+            "height": "auto",
+            "position": "relative",
+            "width": "auto",
+          }
+        }
+      >
+        <form
+          autoComplete="off"
+          className="storm-form"
+          formSubmitEvent={[Function]}
+          resetButton="Reset"
+          showReset={true}
+          showSubmit={true}
+          submitButton="Submit"
+        >
+          <div
+            allowValueOverride={true}
+            className="storm-group"
+            name=""
+            value={null}
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>
+                      Name
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Name"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Name"
+                      submitOnEnter={false}
+                      value=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      Surname
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Surname"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Surname"
+                      submitOnEnter={false}
+                      value=""
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            className="storm-form__buttons"
+          >
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Submit"
+            />
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Reset"
+            />
+          </div>
+        </form>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": undefined,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": "auto",
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": "auto",
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 5,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": undefined,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 5,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Forms Simple Form with nested groups 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "rgb(255, 255, 255)",
+      "bottom": 0,
+      "display": "flex",
+      "flexDirection": "column",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "boxSizing": "border-box",
+        "flex": 1,
+        "margin": 50,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "border": "solid 1px rgba(0, 0, 0, 0.0)",
+            "boxSizing": "border-box",
+            "height": "auto",
+            "position": "relative",
+            "width": "auto",
+          }
+        }
+      >
+        <form
+          autoComplete="off"
+          className="storm-form"
+          formSubmitEvent={[Function]}
+          resetButton="Reset"
+          showReset={true}
+          showSubmit={true}
+          submitButton="Submit"
+        >
+          <div
+            allowValueOverride={true}
+            className="storm-group"
+            name=""
+            value={null}
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>
+                      Name
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Name"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Name"
+                      submitOnEnter={false}
+                      value=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      Surname
+                    </label>
+                  </td>
+                  <td>
+                    <input
+                      allowValueOverride={true}
+                      className="storm-field"
+                      displayLabel={true}
+                      livetype={false}
+                      name="Surname"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Surname"
+                      submitOnEnter={false}
+                      value=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    colSpan={2}
+                  >
+                    <div
+                      allowValueOverride={true}
+                      className="storm-group"
+                      name="group1"
+                      value={null}
+                    >
+                      <input
+                        allowValueOverride={true}
+                        className="storm-field"
+                        displayLabel={true}
+                        livetype={false}
+                        name="Nested Name"
+                        onChange={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Nested Name"
+                        submitOnEnter={false}
+                        value=""
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            className="storm-form__buttons"
+          >
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Submit"
+            />
+            <input
+              className="storm-button"
+              onClick={[Function]}
+              type="button"
+              value="Reset"
+            />
+          </div>
+        </form>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": undefined,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": "auto",
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": -19,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": "auto",
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 5,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": -19,
+              "position": "absolute",
+              "right": "auto",
+              "top": "auto",
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 0,
+                "position": "absolute",
+                "right": 5,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": "auto",
+                "position": "absolute",
+                "right": 0,
+                "top": 5,
+              }
+            }
+          />
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "bottom": -19,
+              "height": 20,
+              "left": "auto",
+              "position": "absolute",
+              "right": -19,
+              "top": undefined,
+              "width": 20,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderBottom": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": "auto",
+                "left": 5,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "borderRight": "solid 1px rgba(0, 0, 0, 0.1)",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": "auto",
+                "top": 5,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

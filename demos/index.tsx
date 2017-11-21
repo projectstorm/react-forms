@@ -12,6 +12,7 @@ import {
 
 require("./test.scss");
 
+
 storiesOf("Elements", module)
 	.addDecorator(host({
 		align: 'center middle',
@@ -71,6 +72,16 @@ storiesOf("Forms", module)
                 </TableLayoutWidget>
             </FormWidget>
         )
+	})
+	.add("Custom Buttons", () => {
+		return (
+			<FormWidget submitButton="Save Form" resetButton="custom reset button" formSubmitEvent={action("formSubmitEvent")}>
+				<TableLayoutWidget>
+					<FieldElementWidget name="Name" />
+					<FieldElementWidget name="Surname" />
+				</TableLayoutWidget>
+			</FormWidget>
+		)
 	})
 	.add("Simple Form with nested groups", () => {
 		return (
