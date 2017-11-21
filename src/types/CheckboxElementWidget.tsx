@@ -1,19 +1,19 @@
 import * as React from "react";
 import * as _ from "lodash";
 import * as PropTypes from 'prop-types';
-import {BaseElementWidget,BaseElementWidgetProps,BaseElementWidgetState} from "../core/BaseElementWidget";
+import {BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState} from "../core/BaseElementWidget";
 import {FormContext} from "../core/FormWidget";
 
-export interface CheckboxElementWidgetProps extends BaseElementWidgetProps<boolean>{
+export interface CheckboxElementWidgetProps extends BaseElementWidgetProps<boolean> {
 }
 
-export interface CheckboxElementWidgetState extends BaseElementWidgetState<boolean>{
+export interface CheckboxElementWidgetState extends BaseElementWidgetState<boolean> {
 }
 
 /**
  * @author dylanvorster
  */
-export class CheckboxElementWidget extends BaseElementWidget<boolean,CheckboxElementWidgetProps, CheckboxElementWidgetState> {
+export class CheckboxElementWidget extends BaseElementWidget<boolean, CheckboxElementWidgetProps, CheckboxElementWidgetState> {
 
 	context: FormContext;
 
@@ -21,7 +21,7 @@ export class CheckboxElementWidget extends BaseElementWidget<boolean,CheckboxEle
 		form: PropTypes.any
 	}
 
-	constructor(props: CheckboxElementWidgetProps){
+	constructor(props: CheckboxElementWidgetProps) {
 		super(props);
 	}
 
@@ -30,7 +30,7 @@ export class CheckboxElementWidget extends BaseElementWidget<boolean,CheckboxEle
 		return (
 			<input type="checkbox" {...this.props as any} checked={this.state.value} onChange={(event) => {
 				this.setValue(event.target.checked);
-			}} />
+			}}/>
 		);
 	}
 }

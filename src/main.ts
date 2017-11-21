@@ -7,6 +7,7 @@ export * from "./core/ButtonElementWidget";
 export * from "./core/FormWidget";
 export * from "./types/FieldElementWidget";
 export * from "./types/SelectElementWidget";
+export * from "./types/CheckboxElementWidget";
 export * from "./layout/TableLayoutWidget";
 
 import {FormGroupWidgetFactory,FormGroupWidget,FormGroupWidgetState,FormGroupWidgetProps} from "./core/FormGroupWidget";

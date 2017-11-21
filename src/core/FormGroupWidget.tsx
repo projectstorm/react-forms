@@ -51,7 +51,7 @@ export class FormGroupWidget extends BaseElementWidget<any,FormGroupWidgetProps,
 				return child;
 			}
 
-			var children = null;
+			var children = child.props.children;
 
 			//if its not a nested system we must go deeper
 			if (child.type !== FormGroupWidget && child.props.children) {
@@ -60,20 +60,25 @@ export class FormGroupWidget extends BaseElementWidget<any,FormGroupWidgetProps,
 
 			//bind the children (cant use instance of here because typescript|react is being stupid)
 			if ((child.type['__proto__'] as any) === BaseElementWidget) {
-				return React.cloneElement(child,{
+
+				let props: any = {
 					ref: (ob) => {
 						this.elements[child.props.name] = ob;
 					}
-				},children);
+				};
+				if(this.state.value){
+					props['value'] = this.state.value[child.props.name];
+				}
 
+				return React.cloneElement(child, props ,children);
 			}
-			return React.cloneElement(child,null,children);
+			return React.cloneElement(child,null, children);
 		});
 	}
 
 	render() {
 		return (
-			<div className="storm-group">
+			<div className="storm-group" {...this.props}>
 				{this.bindChildren(this.props.children)}
 			</div>
 		);

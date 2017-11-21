@@ -2,37 +2,37 @@ import * as React from "react";
 import * as _ from "lodash";
 import {BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState} from "../core/BaseElementWidget";
 
-export interface SelectElementWidgetProps extends BaseElementWidgetProps<string>{
+export interface SelectElementWidgetProps extends BaseElementWidgetProps<string> {
 	groups: any;
 	defaultGroup?: string;
 }
 
-export interface SelectElementWidgetState extends BaseElementWidgetState<string>{
+export interface SelectElementWidgetState extends BaseElementWidgetState<string> {
 	groups: any;
 }
 
 /**
  * @author dylanvorster
  */
-export class SelectElementWidget  extends BaseElementWidget<string,SelectElementWidgetProps, SelectElementWidgetState>  {
+export class SelectElementWidget extends BaseElementWidget<string, SelectElementWidgetProps, SelectElementWidgetState> {
 
 	public static defaultProps: SelectElementWidgetProps = {
 		groups: {},
-		defaultGroup:'Please select:'
+		defaultGroup: 'Please select:'
 	};
 
-	constructor(props: SelectElementWidgetProps){
+	constructor(props: SelectElementWidgetProps) {
 		super(props);
 		this.state = this.computeNewComponentState(props);
 	}
 
-	computeNewComponentState(props): SelectElementWidgetState{
+	computeNewComponentState(props): SelectElementWidgetState {
 		//compute the new set of options
 		let options = this.getOptions(props.groups);
 
 
 		let value = this.state.value;
-		if(value === null || (props.allowValueOverride && props.value !== undefined)){
+		if (value === null || (props.allowValueOverride && props.value !== undefined)) {
 			value = props.value;
 		}
 
@@ -41,15 +41,15 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		let foundValue = false;
 		let possibleOption = null;
 		loop:
-		for(let i in this.props.groups){
-			for(let j in this.props.groups[i]){
-				possibleOption =  possibleOption || j;
-				if(j === value){
-					foundValue = true;
-					break loop;
+			for (let i in this.props.groups) {
+				for (let j in this.props.groups[i]) {
+					possibleOption = possibleOption || j;
+					if (j === value) {
+						foundValue = true;
+						break loop;
+					}
 				}
 			}
-		}
 
 		let newState = {
 			value: value,
@@ -57,7 +57,7 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 			groups: options
 		};
 
-		if(!foundValue && possibleOption){
+		if (!foundValue && possibleOption) {
 			newState.value = possibleOption;
 			newState.resetValue = possibleOption;
 		}
@@ -65,19 +65,19 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		return newState;
 	}
 
-	componentWillReceiveProps(nextProps){
+	componentWillReceiveProps(nextProps) {
 		this.setState(this.computeNewComponentState(nextProps));
 	}
 
-	getOptions(groupData: any): {[groupName: string]: {[value: string]: string}}{
+	getOptions(groupData: any): { [groupName: string]: { [value: string]: string } } {
 		let groups = {};
-		for(let i in groupData){
-			if(!_.isObject(groupData[i])){
-				if(!groups[this.props.defaultGroup]){
+		for (let i in groupData) {
+			if (!_.isObject(groupData[i])) {
+				if (!groups[this.props.defaultGroup]) {
 					groups[this.props.defaultGroup] = {};
 				}
 				groups[this.props.defaultGroup][i] = groupData[i];
-			}else{
+			} else {
 				groups[i] = groupData[i];
 			}
 		}
@@ -94,7 +94,7 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 		};
 
 		//only add the value if its valid
-		if(this.getValue()){
+		if (this.getValue()) {
 			props['value'] = this.getValue();
 		}
 
@@ -109,7 +109,8 @@ export class SelectElementWidget  extends BaseElementWidget<string,SelectElement
 									//render each option
 									_.keys((this.state as SelectElementWidgetState).groups[group]).map((key) => {
 										return (
-											<option value={key} key={key}>{(this.state as SelectElementWidgetState).groups[group][key]}</option>
+											<option value={key}
+													key={key}>{(this.state as SelectElementWidgetState).groups[group][key]}</option>
 										);
 									})
 								}

@@ -1,11 +1,67 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { FormWidget, TableLayoutWidget, FieldElementWidget } from "../src/main";
+import {host} from 'storybook-host';
+import {
+	FormWidget,
+	TableLayoutWidget,
+	FieldElementWidget,
+	FormGroupWidget,
+	CheckboxElementWidget
+} from "../src/main";
 
 require("./test.scss");
 
+storiesOf("Elements", module)
+	.addDecorator(host({
+		align: 'center middle',
+	}))
+	.add("Field", () => {
+		return (
+			<FieldElementWidget name="Name" />
+		)
+	})
+	.add("Field with placeholder", () => {
+		return (
+			<FieldElementWidget name="Name" placeholder="Dylan" />
+		)
+	})
+	.add("Field with value", () => {
+		return (
+			<FieldElementWidget name="Name" placeholder="Dylan" value="Hello" />
+		)
+	})
+	.add("Field change event on enter", () => {
+		return (
+			<FieldElementWidget valueChangedEvent={action("event")} />
+		)
+	})
+	.add("Field change event on type", () => {
+		return (
+			<FieldElementWidget livetype={true} valueChangedEvent={action("event")} />
+		)
+	})
+	.add("Checkbox", () => {
+		return (
+			<CheckboxElementWidget name="Name" />
+		)
+	})
+	.add("Checkbox selected", () => {
+		return (
+			<CheckboxElementWidget name="Name" value={true} />
+		)
+	})
+	.add("Checkbox change event", () => {
+		return (
+			<CheckboxElementWidget valueChangedEvent={action('changed')} />
+		)
+	})
+
+
 storiesOf("Forms", module)
+	.addDecorator(host({
+		align: 'center middle',
+	}))
 	.add("Simple Form", () => {
 		return (
             <FormWidget formSubmitEvent={action("formSubmitEvent")}>
@@ -16,3 +72,43 @@ storiesOf("Forms", module)
             </FormWidget>
         )
 	})
+	.add("Simple Form with nested groups", () => {
+		return (
+			<FormWidget formSubmitEvent={action("formSubmitEvent")}>
+				<TableLayoutWidget>
+					<FieldElementWidget name="Name" />
+					<FieldElementWidget name="Surname" />
+					<FormGroupWidget name="group1">
+						<FieldElementWidget name="Nested Name" />
+					</FormGroupWidget>
+				</TableLayoutWidget>
+			</FormWidget>
+		)
+	})
+
+storiesOf("Binded Forms", module)
+	.addDecorator(host({
+		align: 'center middle',
+	}))
+	.add("Binded Form", () => {
+		return (
+			<FormWidget value={{Name: "Dylan", Surname: "Vorster"}} formSubmitEvent={action("formSubmitEvent")}>
+				<TableLayoutWidget>
+					<FieldElementWidget name="Name" />
+					<FieldElementWidget name="Surname" />
+				</TableLayoutWidget>
+			</FormWidget>
+		)
+	})
+	.add("Binded Form 2", () => {
+		return (
+			<FormWidget formSubmitEvent={action("formSubmitEvent")}>
+				<FormGroupWidget value={{Name: "Dylan", Surname: "Vorster"}}>
+					<TableLayoutWidget>
+						<FieldElementWidget name="Name" />
+						<FieldElementWidget name="Surname" />
+					</TableLayoutWidget>
+				</FormGroupWidget>
+			</FormWidget>
+		)
+	});

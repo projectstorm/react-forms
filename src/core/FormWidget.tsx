@@ -3,25 +3,27 @@ import {ButtonElementWidget} from "./ButtonElementWidget";
 import {FormGroupWidget, FormGroupWidgetFactory} from "./FormGroupWidget";
 import {ReactElement} from "react";
 import * as PropTypes from 'prop-types';
+import {BaseElementWidget} from "./BaseElementWidget";
 
-export interface FormWidgetProps{
+export interface FormWidgetProps {
 	formSubmitEvent?: (model: any) => any;
 
 	//show buttons?
 	showReset?: boolean;
-	showSubmit?:boolean;
+	showSubmit?: boolean;
 
 	//buttons
 	submitButton?: string;
 	resetButton?: string;
 
 	children?: JSX.Element | JSX.Element[];
+	value?: any;
 }
 
-export interface FormWidgetState{
+export interface FormWidgetState {
 }
 
-export interface FormContext{
+export interface FormContext {
 	form: FormWidget;
 }
 
@@ -39,41 +41,45 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 	public static defaultProps: FormWidgetProps = {
 		showReset: true,
 		showSubmit: true,
-		submitButton:'Submit',
+		submitButton: 'Submit',
 		resetButton: 'Reset'
 	};
 
-	constructor(props: FormWidgetProps){
+	constructor(props: FormWidgetProps) {
 		super(props);
-		this.state = {
-		}
+		this.state = {}
 	}
 
 	fireFormSubmitEvent(action?: (model: any) => any) {
-		if(action){
+		if (action) {
 			return action(this.rootGroup.getValue());
-		}else{
+		} else {
 			return this.props.formSubmitEvent(this.rootGroup.getValue());
 		}
 	}
 
 	getChildContext(): FormContext {
-		return { form: this };
+		return {form: this};
 	}
 
-	getChildren(): ReactElement<any>{
-		if(React.isValidElement(this.props.children)){
-			if(this.props.children.type instanceof FormGroupWidget){
-				return React.cloneElement( this.props.children,{
+	getChildren(): ReactElement<any> {
+		if (React.isValidElement(this.props.children)) {
+
+			// it is already a form group
+			if ((this.props.children.type['__proto__'] as any) === FormGroupWidget) {
+				return React.cloneElement(this.props.children, {
 					ref: (element) => {
 						this.rootGroup = element;
 					}
 				});
 			}
 		}
-		return FormGroupWidgetFactory({name:"",ref: (element) => {
-			this.rootGroup = element;
-		}},this.props.children);
+
+		return (
+			<FormGroupWidget value={this.props.value} name="" ref={(element) => {
+				this.rootGroup = element;
+			}}>{this.props.children}</FormGroupWidget>
+		);
 	}
 
 	render() {
