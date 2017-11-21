@@ -72,6 +72,16 @@ storiesOf("Forms", module)
             </FormWidget>
         )
 	})
+	.add("Custom Buttons", () => {
+		return (
+			<FormWidget submitButton="Save Form" resetButton="custom reset button" formSubmitEvent={action("formSubmitEvent")}>
+				<TableLayoutWidget>
+					<FieldElementWidget name="Name" />
+					<FieldElementWidget name="Surname" />
+				</TableLayoutWidget>
+			</FormWidget>
+		)
+	})
 	.add("Simple Form with nested groups", () => {
 		return (
 			<FormWidget formSubmitEvent={action("formSubmitEvent")}>
