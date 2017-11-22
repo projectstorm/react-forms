@@ -9,6 +9,7 @@ import {
 	FormGroupWidget,
 	CheckboxElementWidget
 } from "../src/main";
+import {CustomFormWidget} from "./CustomFormWidget";
 
 require("./test.scss");
 
@@ -73,7 +74,7 @@ storiesOf("Forms", module)
             </FormWidget>
         )
 	})
-	.add("Custom Buttons", () => {
+	.add("Customize Buttons", () => {
 		return (
 			<FormWidget submitButton="Save Form" resetButton="custom reset button" formSubmitEvent={action("formSubmitEvent")}>
 				<TableLayoutWidget>
@@ -81,6 +82,11 @@ storiesOf("Forms", module)
 					<FieldElementWidget name="Surname" />
 				</TableLayoutWidget>
 			</FormWidget>
+		)
+	})
+	.add("Custom Buttons", () => {
+		return (
+			<CustomFormWidget />
 		)
 	})
 	.add("Simple Form with nested groups", () => {

@@ -17,7 +17,7 @@
 	"author": "dylanvorster",
 	"scripts": {
 		"test": "jest",
-		"storybook": "start-storybook -p 9001 -c .storybook",
+		"storybook": "start-storybook -p 10000 -c .storybook",
 		"storybook:build": "build-storybook -c .storybook -o .out",
 		"storybook:github": "storybook-to-ghpages",
 		"prepublishOnly": "export NODE_ENV=production && webpack",
