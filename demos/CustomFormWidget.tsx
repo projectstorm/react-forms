@@ -8,10 +8,6 @@ import {
 	CheckboxElementWidget
 } from "../src/main";
 
-export interface FormContext {
-	form: FormWidget;
-}
-
 /**
  * @author Dylan Vorster
  */
