@@ -1,6 +1,9 @@
-demos/**/bundle.js
-demos/**/bundle.js.map
+demos
 src
+images
+tests
+.circleci
+.storybook
 
 # Created by https://www.gitignore.io/api/net,netbeans,sublimetext,phpstorm,windows,osx,node
 

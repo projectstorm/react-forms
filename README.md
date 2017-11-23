@@ -9,7 +9,7 @@ A super simple, no-nonsense form library written in React that (hopefully) just 
 [![NPM](https://img.shields.io/npm/dt/storm-react-forms.svg)](https://npmjs.org/package/storm-react-forms)
 [![CircleCI](https://circleci.com/gh/projectstorm/react-forms/tree/master.svg?style=svg)](https://circleci.com/gh/projectstorm/react-forms/tree/master)
 
-(Please note that this library is a work in progress)
+![Demo1](./images/screenshot1.png)
 
 ## Usage
 
