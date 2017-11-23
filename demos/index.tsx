@@ -7,7 +7,8 @@ import {
 	TableLayoutWidget,
 	FieldElementWidget,
 	FormGroupWidget,
-	CheckboxElementWidget
+	CheckboxElementWidget,
+	SelectElementWidget
 } from "../src/main";
 import {CustomFormWidget} from "./CustomFormWidget";
 
@@ -56,6 +57,21 @@ storiesOf("Elements", module)
 	.add("Checkbox change event", () => {
 		return (
 			<CheckboxElementWidget valueChangedEvent={action('changed')} />
+		)
+	})
+	.add("Select", () => {
+		return (
+			<SelectElementWidget groups={{"1": "item 1", "2": "item 2"}} valueChangedEvent={action('changed')} />
+		)
+	})
+	.add("Select with groups", () => {
+		return (
+			<SelectElementWidget groups={{group1:{"1": "item 1", "2": "item 2"}, group2: {"3": "item 3"}}} valueChangedEvent={action('changed')} />
+		)
+	})
+	.add("Select with value", () => {
+		return (
+			<SelectElementWidget groups={{group1:{"1": "item 1", "2": "item 2"}, group2: {"3": "item 3"}}} value={"2"} />
 		)
 	})
 

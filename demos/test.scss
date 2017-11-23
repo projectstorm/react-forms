@@ -1,0 +1,43 @@
+.storm-field {
+  padding: 0.5em 0.6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.storm-group{
+  table{
+	td{
+	  padding-bottom: 10px;
+	}
+  }
+}
+
+.storm-form{
+  &__buttons{
+	margin-top: 5px;
+	*{
+	  margin-right: 5px;
+	}
+  }
+}
+
+.storm-button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444;
+  color: rgba(0, 0, 0, 0.80);
+  border: none;
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  &:hover{
+	background-color: #dbdbdb;
+  }
+}
