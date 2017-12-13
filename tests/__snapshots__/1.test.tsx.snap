@@ -763,15 +763,12 @@ exports[`Storyshots Elements Field 1`] = `
         }
       >
         <input
-          allowValueOverride={true}
-          className="storm-field"
-          displayLabel={true}
+          className="srf-field srf-field"
           livetype={false}
           name="Name"
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Name"
-          submitOnEnter={false}
           value=""
         />
         <div
@@ -1000,17 +997,13 @@ exports[`Storyshots Elements Field change event on enter 1`] = `
         }
       >
         <input
-          allowValueOverride={true}
-          className="storm-field"
-          displayLabel={true}
+          className="srf-field srf-field"
           livetype={false}
           name=""
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder=""
-          submitOnEnter={false}
           value=""
-          valueChangedEvent={[Function]}
         />
         <div
           data-radium={true}
@@ -1238,17 +1231,13 @@ exports[`Storyshots Elements Field change event on type 1`] = `
         }
       >
         <input
-          allowValueOverride={true}
-          className="storm-field"
-          displayLabel={true}
+          className="srf-field srf-field"
           livetype={true}
           name=""
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder=""
-          submitOnEnter={false}
           value=""
-          valueChangedEvent={[Function]}
         />
         <div
           data-radium={true}
@@ -1476,15 +1465,12 @@ exports[`Storyshots Elements Field with placeholder 1`] = `
         }
       >
         <input
-          allowValueOverride={true}
-          className="storm-field"
-          displayLabel={true}
+          className="srf-field srf-field"
           livetype={false}
           name="Name"
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Dylan"
-          submitOnEnter={false}
           value=""
         />
         <div
@@ -1713,15 +1699,12 @@ exports[`Storyshots Elements Field with value 1`] = `
         }
       >
         <input
-          allowValueOverride={true}
-          className="storm-field"
-          displayLabel={true}
+          className="srf-field srf-field"
           livetype={false}
           name="Name"
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Dylan"
-          submitOnEnter={false}
           value="Hello"
         />
         <div
@@ -1950,17 +1933,9 @@ exports[`Storyshots Elements Select 1`] = `
         }
       >
         <select
-          className="storm-select"
-          defaultGroup="Please select:"
-          groups={
-            Object {
-              "1": "item 1",
-              "2": "item 2",
-            }
-          }
+          className="srf-select srf-select"
           onChange={[Function]}
           value="0"
-          valueChangedEvent={[Function]}
         >
           <optgroup
             label="Please select:"
@@ -2203,22 +2178,9 @@ exports[`Storyshots Elements Select with groups 1`] = `
         }
       >
         <select
-          className="storm-select"
-          defaultGroup="Please select:"
-          groups={
-            Object {
-              "group1": Object {
-                "1": "item 1",
-                "2": "item 2",
-              },
-              "group2": Object {
-                "3": "item 3",
-              },
-            }
-          }
+          className="srf-select srf-select"
           onChange={[Function]}
           value="1"
-          valueChangedEvent={[Function]}
         >
           <optgroup
             label="group1"
@@ -2470,19 +2432,7 @@ exports[`Storyshots Elements Select with value 1`] = `
         }
       >
         <select
-          className="storm-select"
-          defaultGroup="Please select:"
-          groups={
-            Object {
-              "group1": Object {
-                "1": "item 1",
-                "2": "item 2",
-              },
-              "group2": Object {
-                "3": "item 3",
-              },
-            }
-          }
+          className="srf-select srf-select"
           onChange={[Function]}
           value="2"
         >

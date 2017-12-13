@@ -57,12 +57,7 @@ exports[`Storyshots Binded Forms Binded Form 1`] = `
       >
         <form
           autoComplete="off"
-          className="storm-form"
-          formSubmitEvent={[Function]}
-          resetButton="Reset"
-          showReset={true}
-          showSubmit={true}
-          submitButton="Submit"
+          className="srf-form srf-form"
           value={
             Object {
               "Name": "Dylan",
@@ -71,8 +66,7 @@ exports[`Storyshots Binded Forms Binded Form 1`] = `
           }
         >
           <div
-            allowValueOverride={true}
-            className="storm-group"
+            className="srf-group srf-group"
             name=""
             value={
               Object {
@@ -81,46 +75,50 @@ exports[`Storyshots Binded Forms Binded Form 1`] = `
               }
             }
           >
-            <table>
+            <table
+              className="srf-table srf-table"
+            >
               <tbody>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Name
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Name"
-                      submitOnEnter={false}
                       value="Dylan"
                     />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Surname
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Surname"
-                      submitOnEnter={false}
                       value="Vorster"
                     />
                   </td>
@@ -129,16 +127,18 @@ exports[`Storyshots Binded Forms Binded Form 1`] = `
             </table>
           </div>
           <div
-            className="storm-form__buttons"
+            className="srf-form__buttons"
           >
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Submit"
               onClick={[Function]}
               type="button"
               value="Submit"
             />
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Reset"
               onClick={[Function]}
               type="button"
               value="Reset"
@@ -372,22 +372,15 @@ exports[`Storyshots Binded Forms Binded Form 2 1`] = `
       >
         <form
           autoComplete="off"
-          className="storm-form"
-          formSubmitEvent={[Function]}
-          resetButton="Reset"
-          showReset={true}
-          showSubmit={true}
-          submitButton="Submit"
+          className="srf-form srf-form"
         >
           <div
-            allowValueOverride={true}
-            className="storm-group"
+            className="srf-group srf-group"
             name=""
             value={null}
           >
             <div
-              allowValueOverride={true}
-              className="storm-group"
+              className="srf-group srf-group"
               name=""
               value={
                 Object {
@@ -396,46 +389,50 @@ exports[`Storyshots Binded Forms Binded Form 2 1`] = `
                 }
               }
             >
-              <table>
+              <table
+                className="srf-table srf-table"
+              >
                 <tbody>
-                  <tr>
+                  <tr
+                    className="srf-table__row"
+                  >
                     <td>
-                      <label>
+                      <label
+                        className="srf-table__label"
+                      >
                         Name
                       </label>
                     </td>
                     <td>
                       <input
-                        allowValueOverride={true}
-                        className="storm-field"
-                        displayLabel={true}
+                        className="srf-field srf-field"
                         livetype={false}
                         name="Name"
                         onChange={[Function]}
                         onKeyPress={[Function]}
                         placeholder="Name"
-                        submitOnEnter={false}
                         value="Dylan"
                       />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    className="srf-table__row"
+                  >
                     <td>
-                      <label>
+                      <label
+                        className="srf-table__label"
+                      >
                         Surname
                       </label>
                     </td>
                     <td>
                       <input
-                        allowValueOverride={true}
-                        className="storm-field"
-                        displayLabel={true}
+                        className="srf-field srf-field"
                         livetype={false}
                         name="Surname"
                         onChange={[Function]}
                         onKeyPress={[Function]}
                         placeholder="Surname"
-                        submitOnEnter={false}
                         value="Vorster"
                       />
                     </td>
@@ -445,16 +442,18 @@ exports[`Storyshots Binded Forms Binded Form 2 1`] = `
             </div>
           </div>
           <div
-            className="storm-form__buttons"
+            className="srf-form__buttons"
           >
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Submit"
               onClick={[Function]}
               type="button"
               value="Submit"
             />
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Reset"
               onClick={[Function]}
               type="button"
               value="Reset"
@@ -689,59 +688,57 @@ exports[`Storyshots Forms Custom Buttons 1`] = `
         <div>
           <form
             autoComplete="off"
-            className="storm-form"
-            formSubmitEvent={[Function]}
-            resetButton="Reset"
-            showReset={false}
-            showSubmit={false}
-            submitButton="Submit"
+            className="srf-form srf-form"
           >
             <div
-              allowValueOverride={true}
-              className="storm-group"
+              className="srf-group srf-group"
               name=""
               value={null}
             >
-              <table>
+              <table
+                className="srf-table srf-table"
+              >
                 <tbody>
-                  <tr>
+                  <tr
+                    className="srf-table__row"
+                  >
                     <td>
-                      <label>
+                      <label
+                        className="srf-table__label"
+                      >
                         Name
                       </label>
                     </td>
                     <td>
                       <input
-                        allowValueOverride={true}
-                        className="storm-field"
-                        displayLabel={true}
+                        className="srf-field srf-field"
                         livetype={false}
                         name="Name"
                         onChange={[Function]}
                         onKeyPress={[Function]}
                         placeholder="Name"
-                        submitOnEnter={false}
                         value=""
                       />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    className="srf-table__row"
+                  >
                     <td>
-                      <label>
+                      <label
+                        className="srf-table__label"
+                      >
                         Surname
                       </label>
                     </td>
                     <td>
                       <input
-                        allowValueOverride={true}
-                        className="storm-field"
-                        displayLabel={true}
+                        className="srf-field srf-field"
                         livetype={false}
                         name="Surname"
                         onChange={[Function]}
                         onKeyPress={[Function]}
                         placeholder="Surname"
-                        submitOnEnter={false}
                         value=""
                       />
                     </td>
@@ -750,7 +747,7 @@ exports[`Storyshots Forms Custom Buttons 1`] = `
               </table>
             </div>
             <div
-              className="storm-form__buttons"
+              className="srf-form__buttons"
             />
           </form>
           <p>
@@ -997,59 +994,57 @@ exports[`Storyshots Forms Customize Buttons 1`] = `
       >
         <form
           autoComplete="off"
-          className="storm-form"
-          formSubmitEvent={[Function]}
-          resetButton="custom reset button"
-          showReset={true}
-          showSubmit={true}
-          submitButton="Save Form"
+          className="srf-form srf-form"
         >
           <div
-            allowValueOverride={true}
-            className="storm-group"
+            className="srf-group srf-group"
             name=""
             value={null}
           >
-            <table>
+            <table
+              className="srf-table srf-table"
+            >
               <tbody>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Name
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Name"
-                      submitOnEnter={false}
                       value=""
                     />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Surname
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Surname"
-                      submitOnEnter={false}
                       value=""
                     />
                   </td>
@@ -1058,16 +1053,18 @@ exports[`Storyshots Forms Customize Buttons 1`] = `
             </table>
           </div>
           <div
-            className="storm-form__buttons"
+            className="srf-form__buttons"
           >
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Save Form"
               onClick={[Function]}
               type="button"
               value="Save Form"
             />
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="custom reset button"
               onClick={[Function]}
               type="button"
               value="custom reset button"
@@ -1301,59 +1298,57 @@ exports[`Storyshots Forms Simple Form 1`] = `
       >
         <form
           autoComplete="off"
-          className="storm-form"
-          formSubmitEvent={[Function]}
-          resetButton="Reset"
-          showReset={true}
-          showSubmit={true}
-          submitButton="Submit"
+          className="srf-form srf-form"
         >
           <div
-            allowValueOverride={true}
-            className="storm-group"
+            className="srf-group srf-group"
             name=""
             value={null}
           >
-            <table>
+            <table
+              className="srf-table srf-table"
+            >
               <tbody>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Name
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Name"
-                      submitOnEnter={false}
                       value=""
                     />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Surname
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Surname"
-                      submitOnEnter={false}
                       value=""
                     />
                   </td>
@@ -1362,16 +1357,18 @@ exports[`Storyshots Forms Simple Form 1`] = `
             </table>
           </div>
           <div
-            className="storm-form__buttons"
+            className="srf-form__buttons"
           >
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Submit"
               onClick={[Function]}
               type="button"
               value="Submit"
             />
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Reset"
               onClick={[Function]}
               type="button"
               value="Reset"
@@ -1605,83 +1602,79 @@ exports[`Storyshots Forms Simple Form with nested groups 1`] = `
       >
         <form
           autoComplete="off"
-          className="storm-form"
-          formSubmitEvent={[Function]}
-          resetButton="Reset"
-          showReset={true}
-          showSubmit={true}
-          submitButton="Submit"
+          className="srf-form srf-form"
         >
           <div
-            allowValueOverride={true}
-            className="storm-group"
+            className="srf-group srf-group"
             name=""
             value={null}
           >
-            <table>
+            <table
+              className="srf-table srf-table"
+            >
               <tbody>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Name
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Name"
-                      submitOnEnter={false}
                       value=""
                     />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td>
-                    <label>
+                    <label
+                      className="srf-table__label"
+                    >
                       Surname
                     </label>
                   </td>
                   <td>
                     <input
-                      allowValueOverride={true}
-                      className="storm-field"
-                      displayLabel={true}
+                      className="srf-field srf-field"
                       livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Surname"
-                      submitOnEnter={false}
                       value=""
                     />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  className="srf-table__row"
+                >
                   <td
                     colSpan={2}
                   >
                     <div
-                      allowValueOverride={true}
-                      className="storm-group"
+                      className="srf-group srf-group"
                       name="group1"
                       value={null}
                     >
                       <input
-                        allowValueOverride={true}
-                        className="storm-field"
-                        displayLabel={true}
+                        className="srf-field srf-field"
                         livetype={false}
                         name="Nested Name"
                         onChange={[Function]}
                         onKeyPress={[Function]}
                         placeholder="Nested Name"
-                        submitOnEnter={false}
                         value=""
                       />
                     </div>
@@ -1691,16 +1684,18 @@ exports[`Storyshots Forms Simple Form with nested groups 1`] = `
             </table>
           </div>
           <div
-            className="storm-form__buttons"
+            className="srf-form__buttons"
           >
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Submit"
               onClick={[Function]}
               type="button"
               value="Submit"
             />
             <input
-              className="storm-button"
+              className="srf-button srf-button"
+              name="Reset"
               onClick={[Function]}
               type="button"
               value="Reset"
