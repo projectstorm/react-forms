@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as _ from "lodash";
 import * as PropTypes from 'prop-types';
 import {BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState} from "../core/BaseElementWidget";
 import {FormContext} from "../core/FormWidget";
@@ -22,7 +21,7 @@ export class CheckboxElementWidget extends BaseElementWidget<boolean, CheckboxEl
 	}
 
 	constructor(props: CheckboxElementWidgetProps) {
-		super(props);
+		super("srf-checkbox", props);
 	}
 
 	render() {

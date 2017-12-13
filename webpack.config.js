@@ -1,8 +1,6 @@
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var WebpackNotifierPlugin = require('webpack-notifier');
 var CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
-var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 var plugins = [];
 

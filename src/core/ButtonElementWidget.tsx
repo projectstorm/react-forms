@@ -1,6 +1,7 @@
 import * as React from "react";
+import {BaseWidget, BaseWidgetProps} from "./BaseWidget";
 
-export interface ButtonElementWidgetProps{
+export interface ButtonElementWidgetProps extends BaseWidgetProps{
 	name: string;
 	action: () => any
 }
@@ -11,16 +12,16 @@ export interface ButtonElementWidgetState{
 /**
  * @author dylanvorster
  */
-export class ButtonElementWidget extends React.Component<ButtonElementWidgetProps, ButtonElementWidgetState> {
+export class ButtonElementWidget extends BaseWidget<ButtonElementWidgetProps, ButtonElementWidgetState> {
 
 	constructor(props: ButtonElementWidgetProps){
-		super(props);
+		super("srf-button",props);
 		this.state = {
 		}
 	}
 
 	render() {
-		return <input type="button" className="storm-button" value={this.props.name} onClick={ this.props.action}/>
+		return <input {...this.getProps(['action'])} type="button" value={this.props.name} onClick={ this.props.action}/>
 	}
 }
 

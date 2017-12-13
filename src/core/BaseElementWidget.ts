@@ -1,6 +1,7 @@
 import * as React from "react";
+import {BaseWidget, BaseWidgetProps} from "./BaseWidget";
 
-export interface BaseElementWidgetProps<Type>{
+export interface BaseElementWidgetProps<Type> extends BaseWidgetProps{
 	name?: any;
 	value?: Type|null;
 	valueChangedEvent?: (value: Type) => any;
@@ -18,7 +19,7 @@ export interface BaseElementWidgetState<Type>{
 /**
  * @author Dylan Vorster
  */
-export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S extends BaseElementWidgetState<Type>> extends React.Component<P, S> {
+export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S extends BaseElementWidgetState<Type>> extends BaseWidget<P, S> {
 
 	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
@@ -28,12 +29,18 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 
 	state: S;
 
-	constructor(props: P) {
-		super(props);
+	constructor(name: string, props: P) {
+		super(name, props);
 		(this.state as any) = {
 			value: props.value || null,
 			resetValue: props.value || null
 		}
+	}
+
+	getProps(omit: string[] = []): any {
+		return super.getProps(omit.concat([
+			'valueChangedEvent', 'allowValueOverride', 'displayLabel'
+		]));
 	}
 
 	/**

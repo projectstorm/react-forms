@@ -1,11 +1,11 @@
 import * as React from "react";
 import {ButtonElementWidget} from "./ButtonElementWidget";
-import {FormGroupWidget, FormGroupWidgetFactory} from "./FormGroupWidget";
+import {FormGroupWidget} from "./FormGroupWidget";
 import {ReactElement} from "react";
 import * as PropTypes from 'prop-types';
-import {BaseElementWidget} from "./BaseElementWidget";
+import {BaseWidget, BaseWidgetProps} from "./BaseWidget";
 
-export interface FormWidgetProps {
+export interface FormWidgetProps extends BaseWidgetProps {
 	formSubmitEvent?: (model: any) => any;
 
 	//show buttons?
@@ -30,7 +30,7 @@ export interface FormContext {
 /**
  * @author Dylan Vorster
  */
-export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState> {
+export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
 
 	rootGroup: FormGroupWidget;
 
@@ -46,7 +46,7 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 	};
 
 	constructor(props: FormWidgetProps) {
-		super(props);
+		super("srf-form", props);
 		this.state = {}
 	}
 
@@ -84,9 +84,11 @@ export class FormWidget extends React.Component<FormWidgetProps, FormWidgetState
 
 	render() {
 		return (
-			<form {...this.props} autoComplete="off" className="storm-form">
+			<form {...this.getProps([
+				'formSubmitEvent', 'showReset', 'showSubmit', 'submitButton', 'resetButton'
+			])} autoComplete="off">
 				{this.getChildren()}
-				<div className="storm-form__buttons">
+				<div className={this.bem('__buttons')}>
 					{
 						this.props.showSubmit && <ButtonElementWidget name={this.props.submitButton} action={() => {
 							this.fireFormSubmitEvent();

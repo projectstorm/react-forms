@@ -33,47 +33,41 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 
 
 	constructor(props: FieldElementWidgetProps) {
-		super(props);
+		super('srf-field', props);
 	}
 
 	render() {
 		var props = {
-			className: "storm-field",
-			...this.props,
+			... this.getProps(['submitOnEnter']),
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
 			onChange: (event) => {
 				this.setValue(event.target.value, this.props.livetype);
-			}
+			},
+			onKeyPress: (event) => {
+				if (event.key === 'Enter') {
+
+					//dont reload the page
+					event.preventDefault();
+
+					//livetype
+					if (this.props.livetype === false && this.props.valueChangedEvent) {
+						this.props.valueChangedEvent(this.state.value);
+					}
+
+					//enter button is used to submit form
+					if (this.props.submitOnEnter && this.context.form) {
+						this.context.form.fireFormSubmitEvent();
+					}
+				}
+			},
+
+			// text fields must at least have an empty string
+			value: this.getValue() || ""
 		};
 
 		// fix for autocomplete
 		if (this.props.autoComplete === "off" && this.props.type === "password") {
 			props['autoComplete'] = "new-password";
-		}
-
-		props['onKeyPress'] = (event) => {
-			if (event.key === 'Enter') {
-
-				//dont reload the page
-				event.preventDefault();
-
-				//livetype
-				if (this.props.livetype === false && this.props.valueChangedEvent) {
-					this.props.valueChangedEvent(this.state.value);
-				}
-
-				//enter button is used to submit form
-				if (this.props.submitOnEnter && this.context.form) {
-					this.context.form.fireFormSubmitEvent();
-				}
-			}
-		};
-
-		//only add the value if its valid
-		if (this.getValue()) {
-			props['value'] = this.getValue();
-		} else {
-			props['value'] = "";
 		}
 
 		return (

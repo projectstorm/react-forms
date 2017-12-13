@@ -22,7 +22,7 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 	};
 
 	constructor(props: SelectElementWidgetProps) {
-		super(props);
+		super("srf-select", props);
 		this.state = this.computeNewComponentState(props);
 	}
 
@@ -85,9 +85,8 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 	}
 
 	render() {
-		var props = {
-			className: "storm-select",
-			...this.props,
+		let props = {
+			...this.getProps(['defaultGroup', 'groups']),
 			onChange: (event) => {
 				this.setValue(event.target.value);
 			}

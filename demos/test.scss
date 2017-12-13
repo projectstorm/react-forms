@@ -1,4 +1,4 @@
-.storm-field {
+.srf-field {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -9,7 +9,7 @@
   outline: none;
 }
 
-.storm-group{
+.srf-group{
   table{
 	td{
 	  padding-bottom: 10px;
@@ -17,7 +17,7 @@
   }
 }
 
-.storm-form{
+.srf-form{
   &__buttons{
 	margin-top: 5px;
 	*{
@@ -26,7 +26,7 @@
   }
 }
 
-.storm-button {
+.srf-button {
   cursor: pointer;
   font-family: inherit;
   font-size: 100%;
@@ -37,6 +37,7 @@
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: 2px;
+
   &:hover{
 	background-color: #dbdbdb;
   }
