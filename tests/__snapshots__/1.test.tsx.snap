@@ -764,7 +764,6 @@ exports[`Storyshots Elements Field 1`] = `
       >
         <input
           className="srf-field srf-field"
-          livetype={false}
           name="Name"
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -998,7 +997,6 @@ exports[`Storyshots Elements Field change event on enter 1`] = `
       >
         <input
           className="srf-field srf-field"
-          livetype={false}
           name=""
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -1232,7 +1230,6 @@ exports[`Storyshots Elements Field change event on type 1`] = `
       >
         <input
           className="srf-field srf-field"
-          livetype={true}
           name=""
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -1466,7 +1463,6 @@ exports[`Storyshots Elements Field with placeholder 1`] = `
       >
         <input
           className="srf-field srf-field"
-          livetype={false}
           name="Name"
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -1700,7 +1696,6 @@ exports[`Storyshots Elements Field with value 1`] = `
       >
         <input
           className="srf-field srf-field"
-          livetype={false}
           name="Name"
           onChange={[Function]}
           onKeyPress={[Function]}

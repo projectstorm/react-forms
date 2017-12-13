@@ -92,7 +92,6 @@ exports[`Storyshots Binded Forms Binded Form 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -114,7 +113,6 @@ exports[`Storyshots Binded Forms Binded Form 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -406,7 +404,6 @@ exports[`Storyshots Binded Forms Binded Form 2 1`] = `
                     <td>
                       <input
                         className="srf-field srf-field"
-                        livetype={false}
                         name="Name"
                         onChange={[Function]}
                         onKeyPress={[Function]}
@@ -428,7 +425,6 @@ exports[`Storyshots Binded Forms Binded Form 2 1`] = `
                     <td>
                       <input
                         className="srf-field srf-field"
-                        livetype={false}
                         name="Surname"
                         onChange={[Function]}
                         onKeyPress={[Function]}
@@ -712,7 +708,6 @@ exports[`Storyshots Forms Custom Buttons 1`] = `
                     <td>
                       <input
                         className="srf-field srf-field"
-                        livetype={false}
                         name="Name"
                         onChange={[Function]}
                         onKeyPress={[Function]}
@@ -734,7 +729,6 @@ exports[`Storyshots Forms Custom Buttons 1`] = `
                     <td>
                       <input
                         className="srf-field srf-field"
-                        livetype={false}
                         name="Surname"
                         onChange={[Function]}
                         onKeyPress={[Function]}
@@ -1018,7 +1012,6 @@ exports[`Storyshots Forms Customize Buttons 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -1040,7 +1033,6 @@ exports[`Storyshots Forms Customize Buttons 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -1322,7 +1314,6 @@ exports[`Storyshots Forms Simple Form 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -1344,7 +1335,6 @@ exports[`Storyshots Forms Simple Form 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -1626,7 +1616,6 @@ exports[`Storyshots Forms Simple Form with nested groups 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Name"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -1648,7 +1637,6 @@ exports[`Storyshots Forms Simple Form with nested groups 1`] = `
                   <td>
                     <input
                       className="srf-field srf-field"
-                      livetype={false}
                       name="Surname"
                       onChange={[Function]}
                       onKeyPress={[Function]}
@@ -1670,7 +1658,6 @@ exports[`Storyshots Forms Simple Form with nested groups 1`] = `
                     >
                       <input
                         className="srf-field srf-field"
-                        livetype={false}
                         name="Nested Name"
                         onChange={[Function]}
                         onKeyPress={[Function]}
