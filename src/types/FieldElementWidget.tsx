@@ -38,7 +38,7 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 
 	render() {
 		var props = {
-			... this.getProps(['submitOnEnter']),
+			... this.getProps(['submitOnEnter', 'livetype']),
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
 			onChange: (event) => {
 				this.setValue(event.target.value, this.props.livetype);
