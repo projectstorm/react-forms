@@ -1,5 +1,4 @@
-import * as React from "react";
-import {BaseWidget, BaseWidgetProps} from "./BaseWidget";
+import {BaseWidget, BaseWidgetProps} from "@projectstorm/react-core";
 
 export interface BaseElementWidgetProps<Type> extends BaseWidgetProps{
 	name?: any;
@@ -16,9 +15,6 @@ export interface BaseElementWidgetState<Type>{
 	resetValue: Type|null;
 }
 
-/**
- * @author Dylan Vorster
- */
 export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S extends BaseElementWidgetState<Type>> extends BaseWidget<P, S> {
 
 	public static defaultProps: BaseElementWidgetProps<any> = {
@@ -35,12 +31,6 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 			value: props.value || null,
 			resetValue: props.value || null
 		}
-	}
-
-	getProps(omit: string[] = []): any {
-		return super.getProps(omit.concat([
-			'valueChangedEvent', 'allowValueOverride', 'displayLabel'
-		]));
 	}
 
 	/**
@@ -88,5 +78,3 @@ export class BaseElementWidget<Type,P extends BaseElementWidgetProps<Type>,S ext
 		});
 	}
 }
-
-export var BaseElementWidgetFactory = React.createFactory(BaseElementWidget);

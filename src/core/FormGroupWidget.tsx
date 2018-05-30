@@ -12,9 +12,6 @@ export interface FormGroupWidgetProps extends BaseElementWidgetProps<any> {
 export interface FormGroupWidgetState extends BaseElementWidgetState<any> {
 }
 
-/**
- * @author dylanvorster
- */
 export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps, FormGroupWidgetState> {
 
 	protected elements: { [name: string]: BaseElementWidget<any, BaseElementWidgetProps<any>, BaseElementWidgetState<any>> }

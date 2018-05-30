@@ -1,6 +1,6 @@
 import * as React from "react";
 import {BaseElementWidget} from "../core/BaseElementWidget";
-import {BaseWidget, BaseWidgetProps} from "../core/BaseWidget";
+import {BaseWidget, BaseWidgetProps} from "@projectstorm/react-core";
 
 export interface TableLayoutWidgetProps extends BaseWidgetProps{
 }
@@ -8,9 +8,6 @@ export interface TableLayoutWidgetProps extends BaseWidgetProps{
 export interface TableLayoutWidgetState{
 }
 
-/**
- * @author dylanvorster
- */
 export class TableLayoutWidget extends BaseWidget<TableLayoutWidgetProps, TableLayoutWidgetState> {
 
 	constructor(props: TableLayoutWidgetProps){

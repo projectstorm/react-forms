@@ -1,5 +1,5 @@
 import * as React from "react";
-import {BaseWidget, BaseWidgetProps} from "./BaseWidget";
+import {BaseWidget, BaseWidgetProps} from "@projectstorm/react-core";
 
 export interface ButtonElementWidgetProps extends BaseWidgetProps{
 	name: string;
@@ -9,9 +9,6 @@ export interface ButtonElementWidgetProps extends BaseWidgetProps{
 export interface ButtonElementWidgetState{
 }
 
-/**
- * @author dylanvorster
- */
 export class ButtonElementWidget extends BaseWidget<ButtonElementWidgetProps, ButtonElementWidgetState> {
 
 	constructor(props: ButtonElementWidgetProps){
@@ -21,7 +18,7 @@ export class ButtonElementWidget extends BaseWidget<ButtonElementWidgetProps, Bu
 	}
 
 	render() {
-		return <input {...this.getProps(['action'])} type="button" value={this.props.name} onClick={ this.props.action}/>
+		return <input {...this.getProps()} type="button" value={this.props.name} onClick={ this.props.action}/>
 	}
 }
 

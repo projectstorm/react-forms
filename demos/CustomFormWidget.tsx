@@ -4,8 +4,6 @@ import {
 	FormWidget,
 	TableLayoutWidget,
 	FieldElementWidget,
-	FormGroupWidget,
-	CheckboxElementWidget
 } from "../src/main";
 
 /**

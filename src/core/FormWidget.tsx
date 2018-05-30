@@ -3,7 +3,7 @@ import {ButtonElementWidget} from "./ButtonElementWidget";
 import {FormGroupWidget} from "./FormGroupWidget";
 import {ReactElement} from "react";
 import * as PropTypes from 'prop-types';
-import {BaseWidget, BaseWidgetProps} from "./BaseWidget";
+import {BaseWidget, BaseWidgetProps} from "@projectstorm/react-core";
 
 export interface FormWidgetProps extends BaseWidgetProps {
 	formSubmitEvent?: (model: any) => any;
@@ -84,9 +84,7 @@ export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
 
 	render() {
 		return (
-			<form {...this.getProps([
-				'formSubmitEvent', 'showReset', 'showSubmit', 'submitButton', 'resetButton'
-			])} autoComplete="off">
+			<form {...this.getProps()} autoComplete="off">
 				{this.getChildren()}
 				<div className={this.bem('__buttons')}>
 					{

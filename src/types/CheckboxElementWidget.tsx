@@ -9,16 +9,13 @@ export interface CheckboxElementWidgetProps extends BaseElementWidgetProps<boole
 export interface CheckboxElementWidgetState extends BaseElementWidgetState<boolean> {
 }
 
-/**
- * @author dylanvorster
- */
 export class CheckboxElementWidget extends BaseElementWidget<boolean, CheckboxElementWidgetProps, CheckboxElementWidgetState> {
 
 	context: FormContext;
 
 	static contextTypes = {
 		form: PropTypes.any
-	}
+	};
 
 	constructor(props: CheckboxElementWidgetProps) {
 		super("srf-checkbox", props);

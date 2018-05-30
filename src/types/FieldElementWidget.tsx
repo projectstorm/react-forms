@@ -15,9 +15,6 @@ export interface FieldElementWidgetProps extends BaseElementWidgetProps<string> 
 export interface FieldElementWidgetState extends BaseElementWidgetState<string> {
 }
 
-/**
- * @author dylanvorster
- */
 export class FieldElementWidget extends BaseElementWidget<string, FieldElementWidgetProps, FieldElementWidgetState> {
 
 	context: FormContext;
@@ -38,7 +35,7 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 
 	render() {
 		var props = {
-			... this.getProps(['submitOnEnter', 'livetype']),
+			... this.getProps(),
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
 			onChange: (event) => {
 				this.setValue(event.target.value, this.props.livetype);

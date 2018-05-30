@@ -11,9 +11,6 @@ export interface SelectElementWidgetState extends BaseElementWidgetState<string>
 	groups: any;
 }
 
-/**
- * @author dylanvorster
- */
 export class SelectElementWidget extends BaseElementWidget<string, SelectElementWidgetProps, SelectElementWidgetState> {
 
 	public static defaultProps: SelectElementWidgetProps = {
@@ -86,7 +83,7 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 
 	render() {
 		let props = {
-			...this.getProps(['defaultGroup', 'groups']),
+			...this.getProps(),
 			onChange: (event) => {
 				this.setValue(event.target.value);
 			}
