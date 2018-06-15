@@ -1343,6 +1343,28 @@ exports[`Storyshots Forms Simple Form 1`] = `
                     />
                   </td>
                 </tr>
+                <tr
+                  className="srf-table__row"
+                >
+                  <td>
+                    <label
+                      className="srf-table__label"
+                    >
+                      Lots o text
+                    </label>
+                  </td>
+                  <td>
+                    <textarea
+                      className="srf-field srf-field"
+                      name="Lots o text"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Lots o text"
+                      textArea={true}
+                      value=""
+                    />
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
