@@ -3,13 +3,17 @@ module.exports = {
 	verbose: true,
 	moduleFileExtensions: ["ts", "tsx", "js", "json"],
 	transform: {
-		"^.+\\.(ts|tsx)$": "./tests/helpers/tsx-preprocessor.js",
+		"^.+\\.tsx?$": "ts-jest",
 		"^.+\\.(scss)$": "./tests/helpers/scss-preprocessor.js"
 	},
 	moduleNameMapper:{
-		"\\.(css|less)$": __dirname+"/tests/helpers/stylemock.js"
+		"\\.(css|less)$": __dirname+"/tests/helpers/stylemock.js",
+		"\\@storybook/angular/options$": __dirname+"/tests/helpers/stylemock.js",
 	},
 	"testMatch": [
 		"**/tests/*\.test\.*"
-	]
+	],
+	"snapshotSerializers": [
+		"jest-glamor-react"
+	  ]
 };

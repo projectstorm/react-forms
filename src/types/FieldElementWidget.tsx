@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as _ from "lodash";
-import * as PropTypes from 'prop-types';
-import {BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState} from "../core/BaseElementWidget";
-import {FormContext} from "../core/FormWidget";
+import * as PropTypes from "prop-types";
+import { BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState } from "../core/BaseElementWidget";
+import { FormContext } from "../core/FormWidget";
 
 export interface FieldElementWidgetProps extends BaseElementWidgetProps<string> {
 	placeholder?: string;
@@ -12,37 +12,33 @@ export interface FieldElementWidgetProps extends BaseElementWidgetProps<string> 
 	autoComplete?: any;
 }
 
-export interface FieldElementWidgetState extends BaseElementWidgetState<string> {
-}
+export interface FieldElementWidgetState extends BaseElementWidgetState<string> {}
 
 export class FieldElementWidget extends BaseElementWidget<string, FieldElementWidgetProps, FieldElementWidgetState> {
-
 	context: FormContext;
 
 	static contextTypes = {
 		form: PropTypes.any
-	}
+	};
 
 	public static defaultProps: FieldElementWidgetProps = _.extend(BaseElementWidget.defaultProps, {
 		submitOnEnter: false,
-		livetype: false,
+		livetype: false
 	});
 
-
 	constructor(props: FieldElementWidgetProps) {
-		super('srf-field', props);
+		super("srf-field", props);
 	}
 
 	render() {
 		var props = {
-			... this.getProps(),
+			...this.getProps(),
 			placeholder: (this.props as FieldElementWidgetProps).placeholder || this.props.label || this.props.name,
-			onChange: (event) => {
+			onChange: event => {
 				this.setValue(event.target.value, this.props.livetype);
 			},
-			onKeyPress: (event) => {
-				if (event.key === 'Enter') {
-
+			onKeyPress: event => {
+				if (event.key === "Enter") {
 					//dont reload the page
 					event.preventDefault();
 
@@ -64,12 +60,10 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 
 		// fix for autocomplete
 		if (this.props.autoComplete === "off" && this.props.type === "password") {
-			props['autoComplete'] = "new-password";
+			props["autoComplete"] = "new-password";
 		}
 
-		return (
-			<input {...props} />
-		);
+		return <input {...props} />;
 	}
 }
 

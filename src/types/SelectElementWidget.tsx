@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as _ from "lodash";
-import {BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState} from "../core/BaseElementWidget";
+import { BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState } from "../core/BaseElementWidget";
 
 export interface SelectElementWidgetProps extends BaseElementWidgetProps<string> {
 	groups: any;
@@ -12,10 +12,9 @@ export interface SelectElementWidgetState extends BaseElementWidgetState<string>
 }
 
 export class SelectElementWidget extends BaseElementWidget<string, SelectElementWidgetProps, SelectElementWidgetState> {
-
 	public static defaultProps: SelectElementWidgetProps = {
 		groups: {},
-		defaultGroup: 'Please select:'
+		defaultGroup: "Please select:"
 	};
 
 	constructor(props: SelectElementWidgetProps) {
@@ -27,26 +26,23 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 		//compute the new set of options
 		let options = this.getOptions(props.groups);
 
-
 		let value = this.state.value;
 		if (value === null || (props.allowValueOverride && props.value !== undefined)) {
 			value = props.value;
 		}
 
-
 		//try find the state value in the set
 		let foundValue = false;
 		let possibleOption = null;
-		loop:
-			for (let i in this.props.groups) {
-				for (let j in this.props.groups[i]) {
-					possibleOption = possibleOption || j;
-					if (j === value) {
-						foundValue = true;
-						break loop;
-					}
+		loop: for (let i in this.props.groups) {
+			for (let j in this.props.groups[i]) {
+				possibleOption = possibleOption || j;
+				if (j === value) {
+					foundValue = true;
+					break loop;
 				}
 			}
+		}
 
 		let newState = {
 			value: value,
@@ -84,36 +80,33 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 	render() {
 		let props = {
 			...this.getProps(),
-			onChange: (event) => {
+			onChange: event => {
 				this.setValue(event.target.value);
 			}
 		};
 
 		//only add the value if its valid
 		if (this.getValue()) {
-			props['value'] = this.getValue();
+			props["value"] = this.getValue();
 		}
 
 		return (
 			<select {...props}>
-				{
-					//render the groups
-					_.keys((this.state as SelectElementWidgetState).groups).map((group) => {
-						return (
-							<optgroup label={group} key={group}>
-								{
-									//render each option
-									_.keys((this.state as SelectElementWidgetState).groups[group]).map((key) => {
-										return (
-											<option value={key}
-													key={key}>{(this.state as SelectElementWidgetState).groups[group][key]}</option>
-										);
-									})
-								}
-							</optgroup>
-						);
-					})
-				}
+				{//render the groups
+				_.keys((this.state as SelectElementWidgetState).groups).map(group => {
+					return (
+						<optgroup label={group} key={group}>
+							{//render each option
+							_.keys((this.state as SelectElementWidgetState).groups[group]).map(key => {
+								return (
+									<option value={key} key={key}>
+										{(this.state as SelectElementWidgetState).groups[group][key]}
+									</option>
+								);
+							})}
+						</optgroup>
+					);
+				})}
 			</select>
 		);
 	}

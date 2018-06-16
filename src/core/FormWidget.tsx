@@ -1,9 +1,9 @@
 import * as React from "react";
-import {ButtonElementWidget} from "./ButtonElementWidget";
-import {FormGroupWidget} from "./FormGroupWidget";
-import {ReactElement} from "react";
-import * as PropTypes from 'prop-types';
-import {BaseWidget, BaseWidgetProps} from "@projectstorm/react-core";
+import { ButtonElementWidget } from "./ButtonElementWidget";
+import { FormGroupWidget } from "./FormGroupWidget";
+import { ReactElement } from "react";
+import * as PropTypes from "prop-types";
+import { BaseWidget, BaseWidgetProps } from "@projectstorm/react-core";
 
 export interface FormWidgetProps extends BaseWidgetProps {
 	formSubmitEvent?: (model: any) => any;
@@ -20,8 +20,7 @@ export interface FormWidgetProps extends BaseWidgetProps {
 	value?: any;
 }
 
-export interface FormWidgetState {
-}
+export interface FormWidgetState {}
 
 export interface FormContext {
 	form: FormWidget;
@@ -31,23 +30,22 @@ export interface FormContext {
  * @author Dylan Vorster
  */
 export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
-
 	rootGroup: FormGroupWidget;
 
 	static childContextTypes = {
 		form: PropTypes.any
-	}
+	};
 
 	public static defaultProps: FormWidgetProps = {
 		showReset: true,
 		showSubmit: true,
-		submitButton: 'Submit',
-		resetButton: 'Reset'
+		submitButton: "Submit",
+		resetButton: "Reset"
 	};
 
 	constructor(props: FormWidgetProps) {
 		super("srf-form", props);
-		this.state = {}
+		this.state = {};
 	}
 
 	fireFormSubmitEvent(action?: (model: any) => any) {
@@ -59,16 +57,15 @@ export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
 	}
 
 	getChildContext(): FormContext {
-		return {form: this};
+		return { form: this };
 	}
 
 	getChildren(): ReactElement<any> {
 		if (React.isValidElement(this.props.children)) {
-
 			// it is already a form group
-			if ((this.props.children.type['__proto__'] as any) === FormGroupWidget) {
+			if ((this.props.children.type["__proto__"] as any) === FormGroupWidget) {
 				return React.cloneElement(this.props.children, {
-					ref: (element) => {
+					ref: element => {
 						this.rootGroup = element;
 					}
 				});
@@ -76,9 +73,15 @@ export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
 		}
 
 		return (
-			<FormGroupWidget value={this.props.value} name="" ref={(element) => {
-				this.rootGroup = element;
-			}}>{this.props.children}</FormGroupWidget>
+			<FormGroupWidget
+				value={this.props.value}
+				name=""
+				ref={element => {
+					this.rootGroup = element;
+				}}
+			>
+				{this.props.children}
+			</FormGroupWidget>
 		);
 	}
 
@@ -86,17 +89,23 @@ export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
 		return (
 			<form {...this.getProps()} autoComplete="off">
 				{this.getChildren()}
-				<div className={this.bem('__buttons')}>
-					{
-						this.props.showSubmit && <ButtonElementWidget name={this.props.submitButton} action={() => {
-							this.fireFormSubmitEvent();
-						}}/>
-					}
-					{
-						this.props.showReset && <ButtonElementWidget name={this.props.resetButton} action={() => {
-							this.rootGroup.resetValue();
-						}}/>
-					}
+				<div className={this.bem("__buttons")}>
+					{this.props.showSubmit && (
+						<ButtonElementWidget
+							name={this.props.submitButton}
+							action={() => {
+								this.fireFormSubmitEvent();
+							}}
+						/>
+					)}
+					{this.props.showReset && (
+						<ButtonElementWidget
+							name={this.props.resetButton}
+							action={() => {
+								this.rootGroup.resetValue();
+							}}
+						/>
+					)}
 				</div>
 			</form>
 		);

@@ -1,20 +1,16 @@
 import * as React from "react";
 import * as _ from "lodash";
-import {
-	BaseElementWidget, BaseElementWidgetProps,
-	BaseElementWidgetState
-} from "./BaseElementWidget";
-import {ReactElement} from "react";
+import { BaseElementWidget, BaseElementWidgetProps, BaseElementWidgetState } from "./BaseElementWidget";
+import { ReactElement } from "react";
 
-export interface FormGroupWidgetProps extends BaseElementWidgetProps<any> {
-}
+export interface FormGroupWidgetProps extends BaseElementWidgetProps<any> {}
 
-export interface FormGroupWidgetState extends BaseElementWidgetState<any> {
-}
+export interface FormGroupWidgetState extends BaseElementWidgetState<any> {}
 
 export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps, FormGroupWidgetState> {
-
-	protected elements: { [name: string]: BaseElementWidget<any, BaseElementWidgetProps<any>, BaseElementWidgetState<any>> }
+	protected elements: {
+		[name: string]: BaseElementWidget<any, BaseElementWidgetProps<any>, BaseElementWidgetState<any>>;
+	};
 
 	public static defaultProps: BaseElementWidgetProps<any> = {
 		name: "",
@@ -28,13 +24,13 @@ export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps
 	}
 
 	getValue() {
-		return _.mapValues(this.elements, (element) => {
+		return _.mapValues(this.elements, element => {
 			return element.getValue();
 		});
 	}
 
 	resetValue() {
-		_.forEach(this.elements, (element) => {
+		_.forEach(this.elements, element => {
 			element.resetValue();
 		});
 	}
@@ -42,7 +38,6 @@ export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps
 	bindChildren(children) {
 		this.elements = {};
 		return React.Children.map(children, (child: ReactElement<BaseElementWidgetProps<any>>) => {
-
 			//string
 			if (!React.isValidElement(child)) {
 				return child;
@@ -56,15 +51,14 @@ export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps
 			}
 
 			//bind the children (cant use instance of here because typescript|react is being stupid)
-			if ((child.type['__proto__'] as any) === BaseElementWidget) {
-
+			if ((child.type["__proto__"] as any) === BaseElementWidget) {
 				let props: any = {
-					ref: (ob) => {
+					ref: ob => {
 						this.elements[child.props.name] = ob;
 					}
 				};
 				if (this.state.value) {
-					props['value'] = this.state.value[child.props.name];
+					props["value"] = this.state.value[child.props.name];
 				}
 
 				return React.cloneElement(child, props, children);
@@ -74,11 +68,7 @@ export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps
 	}
 
 	render() {
-		return (
-			<div {...this.getProps()}>
-				{this.bindChildren(this.props.children)}
-			</div>
-		);
+		return <div {...this.getProps()}>{this.bindChildren(this.props.children)}</div>;
 	}
 }
 
