@@ -6,14 +6,18 @@ module.exports = {
 		"^.+\\.tsx?$": "ts-jest",
 		"^.+\\.(scss)$": "./tests/helpers/scss-preprocessor.js"
 	},
-	moduleNameMapper:{
-		"\\.(css|less)$": __dirname+"/tests/helpers/stylemock.js",
-		"\\@storybook/angular/options$": __dirname+"/tests/helpers/stylemock.js",
+	moduleNameMapper: {
+		"\\.(css|less)$": __dirname + "/tests/helpers/stylemock.js",
+		"\\@storybook/angular/options$": __dirname + "/tests/helpers/stylemock.js",
 	},
-	"testMatch": [
+	testMatch: [
 		"**/tests/*\.test\.*"
 	],
-	"snapshotSerializers": [
+	snapshotSerializers: [
 		"jest-glamor-react"
-	  ]
+	],
+	testPathIgnorePatterns: [
+		"/node_modules/",
+		"/.out/"
+	]
 };
