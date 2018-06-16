@@ -1,63 +1,63 @@
 {
-	"name": "storm-react-forms",
-	"main": "./dist/main.js",
-	"typings": "./dist/@types/src/main",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/projectstorm/react-forms.git"
-	},
-	"keywords": [
-		"web",
-		"forms",
-		"form",
-		"react",
-		"typescript",
-		"simple"
-	],
-	"author": "dylanvorster",
-	"scripts": {
-		"test": "jest",
-		"storybook": "start-storybook -p 10000 -c .storybook",
-		"storybook:build": "build-storybook -c .storybook -o .out",
-		"storybook:github": "storybook-to-ghpages",
-		"prepublishOnly": "export NODE_ENV=production && webpack",
-		"pretty": "prettier --use-tabs --write \"{src,demos}/**/*.{ts,tsx}\" \"tests/*.tsx\" --print-width 120"
-	},
-	"dependencies": {
-		"@projectstorm/react-core": "^1.0.0",
-		"@types/react-dom": "^16.0.6",
-		"lodash": "^4.17.10",
-		"react": "^16.4.1"
-	},
-	"devDependencies": {
-		"@storybook/addon-actions": "^4.0.0-alpha.9",
-		"@storybook/addon-storyshots": "^4.0.0-alpha.9",
-		"@storybook/react": "^4.0.0-alpha.9",
-		"@storybook/storybook-deployer": "^2.3.0",
-		"@types/jest": "^23.1.0",
-		"@types/lodash": "^4.14.109",
-		"@types/react": "^16.3.17",
-		"css-loader": "^0.28.11",
-		"extract-text-webpack-plugin": "^3.0.2",
-		"file-loader": "^1.1.11",
-		"jest": "^23.1.0",
-		"jest-cli": "^23.1.0",
-		"jest-glamor-react": "^4.3.0",
-		"node-sass": "^4.9.0",
-		"prettier": "^1.13.5",
-		"puppeteer": "^1.5.0",
-		"raf": "^3.4.0",
-		"react-dom": "^16.4.1",
-		"react-test-renderer": "^16.4.1",
-		"sass-loader": "^7.0.3",
-		"source-map-loader": "^0.2.3",
-		"storybook-host": "^5.0.0",
-		"style-loader": "^0.21.0",
-		"ts-jest": "^22.4.6",
-		"ts-loader": "^4.4.1",
-		"typescript": "^2.9.2",
-		"webpack": "^4.12.0",
-		"webpack-node-externals": "^1.7.2"
-	},
-	"version": "1.1.6"
+  "name": "storm-react-forms",
+  "main": "./dist/main.js",
+  "typings": "./dist/@types/src/main",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/projectstorm/react-forms.git"
+  },
+  "keywords": [
+    "web",
+    "forms",
+    "form",
+    "react",
+    "typescript",
+    "simple"
+  ],
+  "author": "dylanvorster",
+  "scripts": {
+    "test": "jest",
+    "storybook": "start-storybook -p 10000 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "storybook:github": "storybook-to-ghpages",
+    "prepublishOnly": "export NODE_ENV=production && webpack",
+    "pretty": "prettier --use-tabs --write \"{src,demos}/**/*.{ts,tsx}\" \"tests/*.tsx\" --print-width 120"
+  },
+  "dependencies": {
+    "@projectstorm/react-core": "^1.0.0",
+    "@types/react-dom": "^16.0.6",
+    "lodash": "^4.17.10",
+    "react": "^16.4.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.9",
+    "@storybook/addon-storyshots": "^4.0.0-alpha.9",
+    "@storybook/react": "^4.0.0-alpha.9",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "@types/jest": "^23.1.0",
+    "@types/lodash": "^4.14.109",
+    "@types/react": "^16.3.17",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "jest": "^23.1.0",
+    "jest-cli": "^23.1.0",
+    "jest-glamor-react": "^4.3.0",
+    "node-sass": "^4.9.0",
+    "prettier": "^1.13.5",
+    "puppeteer": "^1.5.0",
+    "raf": "^3.4.0",
+    "react-dom": "^16.4.1",
+    "react-test-renderer": "^16.4.1",
+    "sass-loader": "^7.0.3",
+    "source-map-loader": "^0.2.3",
+    "storybook-host": "^5.0.0",
+    "style-loader": "^0.21.0",
+    "ts-jest": "^22.4.6",
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "version": "1.1.6"
 }
