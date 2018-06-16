@@ -21,7 +21,7 @@
 		"storybook:build": "build-storybook -c .storybook -o .out",
 		"storybook:github": "storybook-to-ghpages",
 		"prepublishOnly": "export NODE_ENV=production && webpack",
-		"pretty": "prettier --use-tabs --write \"{src,demos}/**/*.{ts,tsx}\" --write \"{tests}/*.{tsx}\" --print-width 120"
+		"pretty": "prettier --use-tabs --write \"{src,demos}/**/*.{ts,tsx}\" \"tests/*.tsx\" --print-width 120"
 	},
 	"dependencies": {
 		"@projectstorm/react-core": "^1.0.0",
