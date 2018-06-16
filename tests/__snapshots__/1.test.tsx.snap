@@ -2850,3 +2850,509 @@ exports[`Storyshots Elements Select with value 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Elements Text area 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <textarea
+          className="srf-field "
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder=""
+          value="Test value"
+        />
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements Text area with live type 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <textarea
+          className="srf-field "
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder=""
+          value="Test value"
+        />
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

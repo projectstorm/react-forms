@@ -10,6 +10,7 @@ export interface FieldElementWidgetProps extends BaseElementWidgetProps<string> 
 	submitOnEnter?: boolean;
 	type?: string;
 	autoComplete?: any;
+	textArea?: boolean;
 }
 
 export interface FieldElementWidgetState extends BaseElementWidgetState<string> {}
@@ -37,18 +38,18 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 			onChange: event => {
 				this.setValue(event.target.value, this.props.livetype);
 			},
-			onKeyPress: event => {
-				if (event.key === "Enter") {
-					//dont reload the page
-					event.preventDefault();
+			onKeyPress: (event) => {
+				if (event.key === 'Enter') {
 
 					//livetype
 					if (this.props.livetype === false && this.props.valueChangedEvent) {
+						event.preventDefault();
 						this.props.valueChangedEvent(this.state.value);
 					}
 
 					//enter button is used to submit form
 					if (this.props.submitOnEnter && this.context.form) {
+						event.preventDefault();
 						this.context.form.fireFormSubmitEvent();
 					}
 				}
@@ -63,7 +64,13 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 			props["autoComplete"] = "new-password";
 		}
 
-		return <input {...props} />;
+		if(this.props.textArea){
+			return <textarea {...props} />;
+		}
+
+		return (
+			<input {...props} />
+		);
 	}
 }
 

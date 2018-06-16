@@ -35,6 +35,17 @@ storiesOf("Elements", module)
 	.add("Field change event on type", () => {
 		return <FieldElementWidget livetype={true} valueChangedEvent={action("event")} />;
 	})
+	.add("Text area", () => {
+		return (
+			<FieldElementWidget textArea={true} value="Test value" />
+		)
+	})
+	.add("Text area with live type", () => {
+		return (
+			<FieldElementWidget textArea={true} livetype={true} valueChangedEvent={action("event")} value="Test value" />
+		)
+	})
+
 	.add("Checkbox", () => {
 		return <CheckboxElementWidget name="Name" />;
 	})
@@ -76,6 +87,7 @@ storiesOf("Forms", module)
 				<TableLayoutWidget>
 					<FieldElementWidget name="Name" />
 					<FieldElementWidget name="Surname" />
+					<FieldElementWidget textArea={true} name="Lots o text" />
 				</TableLayoutWidget>
 			</FormWidget>
 		);
