@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Elements Checkbox 1`] = `
+exports[`Storyshots Elements/Checkbox Simple 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -200,16 +200,20 @@ exports[`Storyshots Elements Checkbox 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          allowValueOverride={true}
-          checked={null}
-          displayLabel={true}
-          livetype={false}
-          name="Name"
-          onChange={[Function]}
-          submitOnEnter={false}
-          type="checkbox"
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            allowValueOverride={true}
+            checked={null}
+            displayLabel={true}
+            livetype={false}
+            name="Name"
+            onChange={[Function]}
+            submitOnEnter={false}
+            type="checkbox"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -256,7 +260,7 @@ exports[`Storyshots Elements Checkbox 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Checkbox change event 1`] = `
+exports[`Storyshots Elements/Checkbox With change event 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -456,17 +460,21 @@ exports[`Storyshots Elements Checkbox change event 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          allowValueOverride={true}
-          checked={null}
-          displayLabel={true}
-          livetype={false}
-          name=""
-          onChange={[Function]}
-          submitOnEnter={false}
-          type="checkbox"
-          valueChangedEvent={[Function]}
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            allowValueOverride={true}
+            checked={null}
+            displayLabel={true}
+            livetype={false}
+            name=""
+            onChange={[Function]}
+            submitOnEnter={false}
+            type="checkbox"
+            valueChangedEvent={[Function]}
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -513,7 +521,7 @@ exports[`Storyshots Elements Checkbox change event 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Checkbox selected 1`] = `
+exports[`Storyshots Elements/Checkbox With selected value 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -713,17 +721,21 @@ exports[`Storyshots Elements Checkbox selected 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          allowValueOverride={true}
-          checked={true}
-          displayLabel={true}
-          livetype={false}
-          name="Name"
-          onChange={[Function]}
-          submitOnEnter={false}
-          type="checkbox"
-          value={true}
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            allowValueOverride={true}
+            checked={true}
+            displayLabel={true}
+            livetype={false}
+            name="Name"
+            onChange={[Function]}
+            submitOnEnter={false}
+            type="checkbox"
+            value={true}
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -770,7 +782,7 @@ exports[`Storyshots Elements Checkbox selected 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Field 1`] = `
+exports[`Storyshots Elements/Field As TextArea 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -970,13 +982,17 @@ exports[`Storyshots Elements Field 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Name"
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <textarea
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value="Test value"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1023,7 +1039,7 @@ exports[`Storyshots Elements Field 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Field change event on enter 1`] = `
+exports[`Storyshots Elements/Field As TextArea area with live type 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -1223,13 +1239,17 @@ exports[`Storyshots Elements Field change event on enter 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <textarea
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value="Test value"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1276,7 +1296,7 @@ exports[`Storyshots Elements Field change event on enter 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Field change event on type 1`] = `
+exports[`Storyshots Elements/Field Simple 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -1476,13 +1496,17 @@ exports[`Storyshots Elements Field change event on type 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Name"
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1529,7 +1553,7 @@ exports[`Storyshots Elements Field change event on type 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Field with placeholder 1`] = `
+exports[`Storyshots Elements/Field With change event on enter 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -1729,13 +1753,17 @@ exports[`Storyshots Elements Field with placeholder 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Dylan"
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1782,7 +1810,7 @@ exports[`Storyshots Elements Field with placeholder 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Field with value 1`] = `
+exports[`Storyshots Elements/Field With change event on type 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -1982,13 +2010,17 @@ exports[`Storyshots Elements Field with value 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Dylan"
-          value="Hello"
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -2035,7 +2067,7 @@ exports[`Storyshots Elements Field with value 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Select 1`] = `
+exports[`Storyshots Elements/Field With placeholder 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -2235,26 +2267,549 @@ exports[`Storyshots Elements Select 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="0"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Please select:"
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Dylan"
+            value=""
+          />
+        </div>
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements/Field With value 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Dylan"
+            value="Hello"
+          />
+        </div>
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements/Select Map 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <div
+          className="pure-form"
+        >
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="a"
           >
-            <option
-              value="1"
+            <optgroup
+              label="Please select:"
             >
-              item 1
-            </option>
-            <option
-              value="2"
-            >
-              item 2
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -2301,7 +2856,7 @@ exports[`Storyshots Elements Select 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Select with groups 1`] = `
+exports[`Storyshots Elements/Select Map in groups 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -2501,35 +3056,39 @@ exports[`Storyshots Elements Select with groups 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="1"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="group1"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="a"
           >
-            <option
-              value="1"
+            <optgroup
+              label="Group 1"
             >
-              item 1
-            </option>
-            <option
-              value="2"
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
             >
-              item 2
-            </option>
-          </optgroup>
-          <optgroup
-            label="group2"
-          >
-            <option
-              value="3"
-            >
-              item 3
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -2576,7 +3135,7 @@ exports[`Storyshots Elements Select with groups 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Select with value 1`] = `
+exports[`Storyshots Elements/Select Map in groups with value 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -2776,35 +3335,39 @@ exports[`Storyshots Elements Select with value 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="2"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="group1"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="c"
           >
-            <option
-              value="1"
+            <optgroup
+              label="Group 1"
             >
-              item 1
-            </option>
-            <option
-              value="2"
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
             >
-              item 2
-            </option>
-          </optgroup>
-          <optgroup
-            label="group2"
-          >
-            <option
-              value="3"
-            >
-              item 3
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -2851,7 +3414,7 @@ exports[`Storyshots Elements Select with value 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Text area 1`] = `
+exports[`Storyshots Elements/Select Map with value 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -3051,13 +3614,35 @@ exports[`Storyshots Elements Text area 1`] = `
       <div
         data-css-3=""
       >
-        <textarea
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value="Test value"
-        />
+        <div
+          className="pure-form"
+        >
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="c"
+          >
+            <optgroup
+              label="Please select:"
+            >
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -3104,7 +3689,7 @@ exports[`Storyshots Elements Text area 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements Text area with live type 1`] = `
+exports[`Storyshots Elements/Select Set 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
@@ -3304,13 +3889,868 @@ exports[`Storyshots Elements Text area with live type 1`] = `
       <div
         data-css-3=""
       >
-        <textarea
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value="Test value"
-        />
+        <div
+          className="pure-form"
+        >
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Apple"
+          >
+            <optgroup
+              label="Please select:"
+            >
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements/Select Set in groups 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <div
+          className="pure-form"
+        >
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Apple"
+          >
+            <optgroup
+              label="Group 1"
+            >
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
+            >
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements/Select Set in groups with value 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <div
+          className="pure-form"
+        >
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Lemon"
+          >
+            <optgroup
+              label="Group 1"
+            >
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
+            >
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
+        <div
+          data-css-4=""
+        >
+          <div
+            data-css-5=""
+          />
+          <div
+            data-css-6=""
+          />
+        </div>
+        <div
+          data-css-7=""
+        >
+          <div
+            data-css-8=""
+          />
+          <div
+            data-css-9=""
+          />
+        </div>
+        <div
+          data-css-10=""
+        >
+          <div
+            data-css-11=""
+          />
+          <div
+            data-css-12=""
+          />
+        </div>
+        <div
+          data-css-13=""
+        >
+          <div
+            data-css-14=""
+          />
+          <div
+            data-css-15=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements/Select Set with value 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  margin: 50px;
+  -webkit-flex: 1;
+}
+
+.css-1,
+[data-css-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-3,
+[data-css-3] {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border: solid 1px rgba(0, 0, 0, 0.0);
+}
+
+.css-4,
+[data-css-4] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: auto;
+  bottom: auto;
+  left: -19px;
+}
+
+.css-5,
+[data-css-5] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+.css-6,
+[data-css-6] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  left: auto;
+}
+
+.css-7,
+[data-css-7] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  bottom: auto;
+  left: auto;
+}
+
+.css-8,
+[data-css-8] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.css-9,
+[data-css-9] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 5px;
+  left: 0;
+}
+
+.css-10,
+[data-css-10] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -19px;
+  left: -19px;
+}
+
+.css-11,
+[data-css-11] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: auto;
+  left: 0;
+}
+
+.css-12,
+[data-css-12] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.css-13,
+[data-css-13] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -19px;
+  bottom: -19px;
+  left: auto;
+}
+
+.css-14,
+[data-css-14] {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 5px;
+}
+
+.css-15,
+[data-css-15] {
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+<div
+  data-css-1=""
+>
+  <div
+    data-css-0=""
+  >
+    <div
+      data-css-2=""
+    >
+      <div
+        data-css-3=""
+      >
+        <div
+          className="pure-form"
+        >
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Peach"
+          >
+            <optgroup
+              label="Please select:"
+            >
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >

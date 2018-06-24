@@ -34,8 +34,8 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 		//try find the state value in the set
 		let foundValue = false;
 		let possibleOption = null;
-		loop: for (let i in this.props.groups) {
-			for (let j in this.props.groups[i]) {
+		loop: for (let i in options) {
+			for (let j in options[i]) {
 				possibleOption = possibleOption || j;
 				if (j === value) {
 					foundValue = true;
@@ -62,16 +62,32 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 		this.setState(this.computeNewComponentState(nextProps));
 	}
 
+	normlaizeGroup(option){
+		if(_.isArray(option)){
+			return _.mapKeys(option, (opt) => {
+				return opt;
+			})
+		}
+		return option;
+	}
+
 	getOptions(groupData: any): { [groupName: string]: { [value: string]: string } } {
+		// its just a normal set
+		if(_.isArray(groupData)){
+			return {
+				[this.props.defaultGroup]: this.normlaizeGroup(groupData)
+			};
+		}
+
 		let groups = {};
 		for (let i in groupData) {
 			if (!_.isObject(groupData[i])) {
 				if (!groups[this.props.defaultGroup]) {
 					groups[this.props.defaultGroup] = {};
 				}
-				groups[this.props.defaultGroup][i] = groupData[i];
+				groups[this.props.defaultGroup][i] = this.normlaizeGroup(groupData[i]);
 			} else {
-				groups[i] = groupData[i];
+				groups[i] = this.normlaizeGroup(groupData[i]);
 			}
 		}
 		return groups;

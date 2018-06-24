@@ -12,6 +12,7 @@ export class CustomFormWidget extends React.Component<any, any> {
 		return (
 			<div>
 				<FormWidget
+					className="pure-form"
 					showReset={false}
 					showSubmit={false}
 					formSubmitEvent={action("formSubmitAction")}
