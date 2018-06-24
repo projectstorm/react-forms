@@ -33,32 +33,7 @@ module.exports = {
 		libraryTarget: 'umd',
 		library: 'SRF'
 	},
-	externals: {
-		react: {
-			root: 'React',
-			commonjs2: 'react',
-			commonjs: 'react',
-			amd: 'react'
-		},
-		'react-dom': {
-			root: 'ReactDOM',
-			commonjs2: 'react-dom',
-			commonjs: 'react-dom',
-			amd: 'react-dom'
-		},
-		"lodash": {
-			commonjs: 'lodash',
-			commonjs2: 'lodash',
-			amd: '_',
-			root: '_'
-		},
-		"prop-types":{
-			commonjs:'prop-types',
-			commonjs2:'prop-types',
-			amd: 'PropTypes',
-			root: 'PropTypes'
-		}
-	},
+	externals: ,
 	plugins:plugins,
 	module: {
 		rules: [
@@ -79,4 +54,4 @@ module.exports = {
 		extensions: [".tsx", ".ts", ".js"]
 	},
 	devtool: process.env.NODE_ENV === 'production'?false:'cheap-module-source-map'
-}
+};

@@ -2,6 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { host } from "storybook-host";
+import { setOptions } from "@storybook/addon-options";
 import {
 	FormWidget,
 	TableLayoutWidget,
@@ -13,6 +14,12 @@ import {
 import { CustomFormWidget } from "./CustomFormWidget";
 
 import "./test.scss";
+
+setOptions({
+	name: "STORM React Forms",
+	url: "https://github.com/projectstorm/react-forms",
+	addonPanelInRight: true
+});
 
 storiesOf("Elements/Field", module)
 	.addDecorator(story => (
