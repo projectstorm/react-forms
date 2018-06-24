@@ -25,12 +25,12 @@
   },
   "dependencies": {
     "@projectstorm/react-core": "^1.0.0",
-    "@storybook/addon-options": "^4.0.0-alpha.9",
     "lodash": "^4.17.10",
     "react": "^16.4.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.9",
+    "@storybook/addon-options": "^4.0.0-alpha.9",
     "@storybook/addon-storyshots": "^4.0.0-alpha.9",
     "@storybook/react": "^4.0.0-alpha.9",
     "@storybook/storybook-deployer": "^2.3.0",
@@ -58,7 +58,9 @@
     "ts-jest": "^22.4.6",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^1.2.6",
     "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
     "webpack-node-externals": "^1.7.2"
   },
   "version": "1.2.0"
