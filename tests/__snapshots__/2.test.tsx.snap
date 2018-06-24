@@ -203,7 +203,7 @@ exports[`Storyshots Forms Custom Buttons 1`] = `
         <div>
           <form
             autoComplete="off"
-            className="srf-form "
+            className="srf-form pure-form "
           >
             <div
               className="srf-group "
@@ -524,7 +524,7 @@ exports[`Storyshots Forms Customize Buttons 1`] = `
       >
         <form
           autoComplete="off"
-          className="srf-form "
+          className="srf-form pure-form "
         >
           <div
             className="srf-group "
@@ -841,7 +841,7 @@ exports[`Storyshots Forms Simple Form 1`] = `
       >
         <form
           autoComplete="off"
-          className="srf-form "
+          className="srf-form pure-form "
         >
           <div
             className="srf-group "
@@ -1178,7 +1178,7 @@ exports[`Storyshots Forms Simple Form with nested groups 1`] = `
       >
         <form
           autoComplete="off"
-          className="srf-form "
+          className="srf-form pure-form "
         >
           <div
             className="srf-group "
@@ -1514,7 +1514,7 @@ exports[`Storyshots Forms/Binded Binded Form 1`] = `
       >
         <form
           autoComplete="off"
-          className="srf-form "
+          className="srf-form pure-form "
         >
           <div
             className="srf-group "
@@ -1831,7 +1831,7 @@ exports[`Storyshots Forms/Binded Binded Form 2 1`] = `
       >
         <form
           autoComplete="off"
-          className="srf-form "
+          className="srf-form pure-form "
         >
           <div
             className="srf-group "

@@ -200,16 +200,20 @@ exports[`Storyshots Elements/Checkbox Simple 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          allowValueOverride={true}
-          checked={null}
-          displayLabel={true}
-          livetype={false}
-          name="Name"
-          onChange={[Function]}
-          submitOnEnter={false}
-          type="checkbox"
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            allowValueOverride={true}
+            checked={null}
+            displayLabel={true}
+            livetype={false}
+            name="Name"
+            onChange={[Function]}
+            submitOnEnter={false}
+            type="checkbox"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -456,17 +460,21 @@ exports[`Storyshots Elements/Checkbox With change event 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          allowValueOverride={true}
-          checked={null}
-          displayLabel={true}
-          livetype={false}
-          name=""
-          onChange={[Function]}
-          submitOnEnter={false}
-          type="checkbox"
-          valueChangedEvent={[Function]}
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            allowValueOverride={true}
+            checked={null}
+            displayLabel={true}
+            livetype={false}
+            name=""
+            onChange={[Function]}
+            submitOnEnter={false}
+            type="checkbox"
+            valueChangedEvent={[Function]}
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -713,17 +721,21 @@ exports[`Storyshots Elements/Checkbox With selected value 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          allowValueOverride={true}
-          checked={true}
-          displayLabel={true}
-          livetype={false}
-          name="Name"
-          onChange={[Function]}
-          submitOnEnter={false}
-          type="checkbox"
-          value={true}
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            allowValueOverride={true}
+            checked={true}
+            displayLabel={true}
+            livetype={false}
+            name="Name"
+            onChange={[Function]}
+            submitOnEnter={false}
+            type="checkbox"
+            value={true}
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -970,13 +982,17 @@ exports[`Storyshots Elements/Field As TextArea 1`] = `
       <div
         data-css-3=""
       >
-        <textarea
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value="Test value"
-        />
+        <div
+          className="pure-form"
+        >
+          <textarea
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value="Test value"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1223,13 +1239,17 @@ exports[`Storyshots Elements/Field As TextArea area with live type 1`] = `
       <div
         data-css-3=""
       >
-        <textarea
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value="Test value"
-        />
+        <div
+          className="pure-form"
+        >
+          <textarea
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value="Test value"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1476,13 +1496,17 @@ exports[`Storyshots Elements/Field Simple 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Name"
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Name"
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1729,13 +1753,17 @@ exports[`Storyshots Elements/Field With change event on enter 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -1982,13 +2010,17 @@ exports[`Storyshots Elements/Field With change event on type 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder=""
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -2235,13 +2267,17 @@ exports[`Storyshots Elements/Field With placeholder 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Dylan"
-          value=""
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Dylan"
+            value=""
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -2488,13 +2524,17 @@ exports[`Storyshots Elements/Field With value 1`] = `
       <div
         data-css-3=""
       >
-        <input
-          className="srf-field "
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Dylan"
-          value="Hello"
-        />
+        <div
+          className="pure-form"
+        >
+          <input
+            className="srf-field "
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Dylan"
+            value="Hello"
+          />
+        </div>
         <div
           data-css-4=""
         >
@@ -2741,31 +2781,35 @@ exports[`Storyshots Elements/Select Map 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="a"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Please select:"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="a"
           >
-            <option
-              value="a"
+            <optgroup
+              label="Please select:"
             >
-              Apple
-            </option>
-            <option
-              value="b"
-            >
-              Peach
-            </option>
-            <option
-              value="c"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -3012,35 +3056,39 @@ exports[`Storyshots Elements/Select Map in groups 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="a"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Group 1"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="a"
           >
-            <option
-              value="a"
+            <optgroup
+              label="Group 1"
             >
-              Apple
-            </option>
-            <option
-              value="b"
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
             >
-              Peach
-            </option>
-          </optgroup>
-          <optgroup
-            label="Group 2"
-          >
-            <option
-              value="c"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -3287,35 +3335,39 @@ exports[`Storyshots Elements/Select Map in groups with value 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="c"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Group 1"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="c"
           >
-            <option
-              value="a"
+            <optgroup
+              label="Group 1"
             >
-              Apple
-            </option>
-            <option
-              value="b"
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
             >
-              Peach
-            </option>
-          </optgroup>
-          <optgroup
-            label="Group 2"
-          >
-            <option
-              value="c"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -3562,31 +3614,35 @@ exports[`Storyshots Elements/Select Map with value 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="c"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Please select:"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="c"
           >
-            <option
-              value="a"
+            <optgroup
+              label="Please select:"
             >
-              Apple
-            </option>
-            <option
-              value="b"
-            >
-              Peach
-            </option>
-            <option
-              value="c"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="a"
+              >
+                Apple
+              </option>
+              <option
+                value="b"
+              >
+                Peach
+              </option>
+              <option
+                value="c"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -3833,31 +3889,35 @@ exports[`Storyshots Elements/Select Set 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="Apple"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Please select:"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Apple"
           >
-            <option
-              value="Apple"
+            <optgroup
+              label="Please select:"
             >
-              Apple
-            </option>
-            <option
-              value="Peach"
-            >
-              Peach
-            </option>
-            <option
-              value="Lemon"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -4104,35 +4164,39 @@ exports[`Storyshots Elements/Select Set in groups 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="Apple"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Group 1"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Apple"
           >
-            <option
-              value="Apple"
+            <optgroup
+              label="Group 1"
             >
-              Apple
-            </option>
-            <option
-              value="Peach"
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
             >
-              Peach
-            </option>
-          </optgroup>
-          <optgroup
-            label="Group 2"
-          >
-            <option
-              value="Lemon"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -4379,35 +4443,39 @@ exports[`Storyshots Elements/Select Set in groups with value 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="Lemon"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Group 1"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Lemon"
           >
-            <option
-              value="Apple"
+            <optgroup
+              label="Group 1"
             >
-              Apple
-            </option>
-            <option
-              value="Peach"
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+            </optgroup>
+            <optgroup
+              label="Group 2"
             >
-              Peach
-            </option>
-          </optgroup>
-          <optgroup
-            label="Group 2"
-          >
-            <option
-              value="Lemon"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
@@ -4654,31 +4722,35 @@ exports[`Storyshots Elements/Select Set with value 1`] = `
       <div
         data-css-3=""
       >
-        <select
-          className="srf-select "
-          onChange={[Function]}
-          value="Peach"
+        <div
+          className="pure-form"
         >
-          <optgroup
-            label="Please select:"
+          <select
+            className="srf-select "
+            onChange={[Function]}
+            value="Peach"
           >
-            <option
-              value="Apple"
+            <optgroup
+              label="Please select:"
             >
-              Apple
-            </option>
-            <option
-              value="Peach"
-            >
-              Peach
-            </option>
-            <option
-              value="Lemon"
-            >
-              Lemon
-            </option>
-          </optgroup>
-        </select>
+              <option
+                value="Apple"
+              >
+                Apple
+              </option>
+              <option
+                value="Peach"
+              >
+                Peach
+              </option>
+              <option
+                value="Lemon"
+              >
+                Lemon
+              </option>
+            </optgroup>
+          </select>
+        </div>
         <div
           data-css-4=""
         >
