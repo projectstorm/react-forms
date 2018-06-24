@@ -15,6 +15,11 @@ import { CustomFormWidget } from "./CustomFormWidget";
 import "./test.scss";
 
 storiesOf("Elements/Field", module)
+	.addDecorator(story => (
+		<div className="pure-form">
+			{story()}
+		</div>
+	))
 	.addDecorator(
 		host({
 			align: "center middle"
@@ -47,6 +52,11 @@ storiesOf("Elements/Field", module)
 	});
 
 storiesOf("Elements/Checkbox", module)
+	.addDecorator(story => (
+		<div className="pure-form">
+			{story()}
+		</div>
+	))
 	.addDecorator(
 		host({
 			align: "center middle"
@@ -63,9 +73,14 @@ storiesOf("Elements/Checkbox", module)
 	});
 
 storiesOf("Elements/Select", module)
+	.addDecorator(story => (
+		<div className="pure-form">
+			{story()}
+		</div>
+	))
 	.addDecorator(
 		host({
-			align: "center middle"
+			align: "center middle",
 		})
 	)
 	.add("Set", () => {
@@ -101,7 +116,7 @@ storiesOf("Forms", module)
 	)
 	.add("Simple Form", () => {
 		return (
-			<FormWidget formSubmitEvent={action("formSubmitEvent")}>
+			<FormWidget className="pure-form" formSubmitEvent={action("formSubmitEvent")}>
 				<TableLayoutWidget>
 					<FieldElementWidget name="Name" />
 					<FieldElementWidget name="Surname" />
@@ -113,6 +128,7 @@ storiesOf("Forms", module)
 	.add("Customize Buttons", () => {
 		return (
 			<FormWidget
+				className="pure-form"
 				submitButton="Save Form"
 				resetButton="custom reset button"
 				formSubmitEvent={action("formSubmitEvent")}
@@ -129,7 +145,7 @@ storiesOf("Forms", module)
 	})
 	.add("Simple Form with nested groups", () => {
 		return (
-			<FormWidget formSubmitEvent={action("formSubmitEvent")}>
+			<FormWidget className="pure-form" formSubmitEvent={action("formSubmitEvent")}>
 				<TableLayoutWidget>
 					<FieldElementWidget name="Name" />
 					<FieldElementWidget name="Surname" />
@@ -144,12 +160,12 @@ storiesOf("Forms", module)
 storiesOf("Forms/Binded", module)
 	.addDecorator(
 		host({
-			align: "center middle"
+			align: "center middle",
 		})
 	)
 	.add("Binded Form", () => {
 		return (
-			<FormWidget value={{ Name: "Dylan", Surname: "Vorster" }} formSubmitEvent={action("formSubmitEvent")}>
+			<FormWidget className="pure-form" value={{ Name: "Dylan", Surname: "Vorster" }} formSubmitEvent={action("formSubmitEvent")}>
 				<TableLayoutWidget>
 					<FieldElementWidget name="Name" />
 					<FieldElementWidget name="Surname" />
@@ -159,7 +175,7 @@ storiesOf("Forms/Binded", module)
 	})
 	.add("Binded Form 2", () => {
 		return (
-			<FormWidget formSubmitEvent={action("formSubmitEvent")}>
+			<FormWidget className="pure-form" formSubmitEvent={action("formSubmitEvent")}>
 				<FormGroupWidget value={{ Name: "Dylan", Surname: "Vorster" }}>
 					<TableLayoutWidget>
 						<FieldElementWidget name="Name" />
