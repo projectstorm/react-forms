@@ -14,65 +14,83 @@ import { CustomFormWidget } from "./CustomFormWidget";
 
 import "./test.scss";
 
-storiesOf("Elements", module)
+storiesOf("Elements/Field", module)
 	.addDecorator(
 		host({
 			align: "center middle"
 		})
 	)
-	.add("Field", () => {
+	.add("Simple", () => {
 		return <FieldElementWidget name="Name" />;
 	})
-	.add("Field with placeholder", () => {
+	.add("With placeholder", () => {
 		return <FieldElementWidget name="Name" placeholder="Dylan" />;
 	})
-	.add("Field with value", () => {
+	.add("With value", () => {
 		return <FieldElementWidget name="Name" placeholder="Dylan" value="Hello" />;
 	})
-	.add("Field change event on enter", () => {
+	.add("With change event on enter", () => {
 		return <FieldElementWidget valueChangedEvent={action("event")} />;
 	})
-	.add("Field change event on type", () => {
+	.add("With change event on type", () => {
 		return <FieldElementWidget livetype={true} valueChangedEvent={action("event")} />;
 	})
-	.add("Text area", () => {
+	.add("As TextArea", () => {
 		return (
 			<FieldElementWidget textArea={true} value="Test value" />
 		)
 	})
-	.add("Text area with live type", () => {
+	.add("As TextArea area with live type", () => {
 		return (
 			<FieldElementWidget textArea={true} livetype={true} valueChangedEvent={action("event")} value="Test value" />
 		)
-	})
+	});
 
-	.add("Checkbox", () => {
+storiesOf("Elements/Checkbox", module)
+	.addDecorator(
+		host({
+			align: "center middle"
+		})
+	)
+	.add("Simple", () => {
 		return <CheckboxElementWidget name="Name" />;
 	})
-	.add("Checkbox selected", () => {
+	.add("With selected value", () => {
 		return <CheckboxElementWidget name="Name" value={true} />;
 	})
-	.add("Checkbox change event", () => {
+	.add("With change event", () => {
 		return <CheckboxElementWidget valueChangedEvent={action("changed")} />;
+	});
+
+storiesOf("Elements/Select", module)
+	.addDecorator(
+		host({
+			align: "center middle"
+		})
+	)
+	.add("Set", () => {
+		return <SelectElementWidget groups={['Apple', 'Peach', 'Lemon']}/>;
 	})
-	.add("Select", () => {
-		return <SelectElementWidget groups={{ "1": "item 1", "2": "item 2" }} valueChangedEvent={action("changed")} />;
+	.add("Set with value", () => {
+		return <SelectElementWidget groups={['Apple', 'Peach', 'Lemon']} value="Peach" />;
 	})
-	.add("Select with groups", () => {
-		return (
-			<SelectElementWidget
-				groups={{ group1: { "1": "item 1", "2": "item 2" }, group2: { "3": "item 3" } }}
-				valueChangedEvent={action("changed")}
-			/>
-		);
+	.add("Set in groups", () => {
+		return <SelectElementWidget groups={{"Group 1": ['Apple', 'Peach'], "Group 2": ['Lemon']}} />;
 	})
-	.add("Select with value", () => {
-		return (
-			<SelectElementWidget
-				groups={{ group1: { "1": "item 1", "2": "item 2" }, group2: { "3": "item 3" } }}
-				value={"2"}
-			/>
-		);
+	.add("Set in groups with value", () => {
+		return <SelectElementWidget groups={{"Group 1": ['Apple', 'Peach'], "Group 2": ['Lemon']}} value="Lemon" />;
+	})
+	.add("Map", () => {
+		return <SelectElementWidget groups={{'a' : 'Apple', 'b' : 'Peach', 'c': 'Lemon'}} />;
+	})
+	.add("Map with value", () => {
+		return <SelectElementWidget groups={{'a' : 'Apple', 'b' : 'Peach', 'c': 'Lemon'}} value="c" />;
+	})
+	.add("Map in groups", () => {
+		return <SelectElementWidget groups={{"Group 1": {'a' : 'Apple', 'b' : 'Peach'}, "Group 2": {'c': 'Lemon'}}} />;
+	})
+	.add("Map in groups with value", () => {
+		return <SelectElementWidget groups={{"Group 1": {'a' : 'Apple', 'b' : 'Peach'}, "Group 2": {'c': 'Lemon'}}} value="c" />;
 	});
 
 storiesOf("Forms", module)
@@ -123,7 +141,7 @@ storiesOf("Forms", module)
 		);
 	});
 
-storiesOf("Binded Forms", module)
+storiesOf("Forms/Binded", module)
 	.addDecorator(
 		host({
 			align: "center middle"
