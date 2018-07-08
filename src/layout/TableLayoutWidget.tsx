@@ -40,5 +40,3 @@ export class TableLayoutWidget extends BaseWidget<TableLayoutWidgetProps, TableL
 		);
 	}
 }
-
-export var TableLayoutWidgetFactory = React.createFactory(TableLayoutWidget);

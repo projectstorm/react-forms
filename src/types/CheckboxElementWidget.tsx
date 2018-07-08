@@ -35,5 +35,3 @@ export class CheckboxElementWidget extends BaseElementWidget<
 		);
 	}
 }
-
-export var CheckboxElementWidgetFactory = React.createFactory(CheckboxElementWidget);

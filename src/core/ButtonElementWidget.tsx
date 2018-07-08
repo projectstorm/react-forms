@@ -18,5 +18,3 @@ export class ButtonElementWidget extends BaseWidget<ButtonElementWidgetProps, Bu
 		return <input {...this.getProps()} type="button" value={this.props.name} onClick={this.props.action} />;
 	}
 }
-
-export var ButtonElementWidgetFactory = React.createFactory(ButtonElementWidget);

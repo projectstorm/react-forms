@@ -111,5 +111,3 @@ export class FormWidget extends BaseWidget<FormWidgetProps, FormWidgetState> {
 		);
 	}
 }
-
-export var FormWidgetFactory = React.createFactory(FormWidget);

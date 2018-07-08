@@ -62,18 +62,18 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 		this.setState(this.computeNewComponentState(nextProps));
 	}
 
-	normlaizeGroup(option){
-		if(_.isArray(option)){
-			return _.mapKeys(option, (opt) => {
+	normlaizeGroup(option) {
+		if (_.isArray(option)) {
+			return _.mapKeys(option, opt => {
 				return opt;
-			})
+			});
 		}
 		return option;
 	}
 
 	getOptions(groupData: any): { [groupName: string]: { [value: string]: string } } {
 		// its just a normal set
-		if(_.isArray(groupData)){
+		if (_.isArray(groupData)) {
 			return {
 				[this.props.defaultGroup]: this.normlaizeGroup(groupData)
 			};
@@ -127,5 +127,3 @@ export class SelectElementWidget extends BaseElementWidget<string, SelectElement
 		);
 	}
 }
-
-export var SelectElementWidgetFactory = React.createFactory(SelectElementWidget);

@@ -22,11 +22,7 @@ setOptions({
 });
 
 storiesOf("Elements/Field", module)
-	.addDecorator(story => (
-		<div className="pure-form">
-			{story()}
-		</div>
-	))
+	.addDecorator(story => <div className="pure-form">{story()}</div>)
 	.addDecorator(
 		host({
 			align: "center middle"
@@ -48,22 +44,21 @@ storiesOf("Elements/Field", module)
 		return <FieldElementWidget livetype={true} valueChangedEvent={action("event")} />;
 	})
 	.add("As TextArea", () => {
-		return (
-			<FieldElementWidget textArea={true} value="Test value" />
-		)
+		return <FieldElementWidget textArea={true} value="Test value" />;
 	})
 	.add("As TextArea area with live type", () => {
 		return (
-			<FieldElementWidget textArea={true} livetype={true} valueChangedEvent={action("event")} value="Test value" />
-		)
+			<FieldElementWidget
+				textArea={true}
+				livetype={true}
+				valueChangedEvent={action("event")}
+				value="Test value"
+			/>
+		);
 	});
 
 storiesOf("Elements/Checkbox", module)
-	.addDecorator(story => (
-		<div className="pure-form">
-			{story()}
-		</div>
-	))
+	.addDecorator(story => <div className="pure-form">{story()}</div>)
 	.addDecorator(
 		host({
 			align: "center middle"
@@ -80,39 +75,40 @@ storiesOf("Elements/Checkbox", module)
 	});
 
 storiesOf("Elements/Select", module)
-	.addDecorator(story => (
-		<div className="pure-form">
-			{story()}
-		</div>
-	))
+	.addDecorator(story => <div className="pure-form">{story()}</div>)
 	.addDecorator(
 		host({
-			align: "center middle",
+			align: "center middle"
 		})
 	)
 	.add("Set", () => {
-		return <SelectElementWidget groups={['Apple', 'Peach', 'Lemon']}/>;
+		return <SelectElementWidget groups={["Apple", "Peach", "Lemon"]} />;
 	})
 	.add("Set with value", () => {
-		return <SelectElementWidget groups={['Apple', 'Peach', 'Lemon']} value="Peach" />;
+		return <SelectElementWidget groups={["Apple", "Peach", "Lemon"]} value="Peach" />;
 	})
 	.add("Set in groups", () => {
-		return <SelectElementWidget groups={{"Group 1": ['Apple', 'Peach'], "Group 2": ['Lemon']}} />;
+		return <SelectElementWidget groups={{ "Group 1": ["Apple", "Peach"], "Group 2": ["Lemon"] }} />;
 	})
 	.add("Set in groups with value", () => {
-		return <SelectElementWidget groups={{"Group 1": ['Apple', 'Peach'], "Group 2": ['Lemon']}} value="Lemon" />;
+		return <SelectElementWidget groups={{ "Group 1": ["Apple", "Peach"], "Group 2": ["Lemon"] }} value="Lemon" />;
 	})
 	.add("Map", () => {
-		return <SelectElementWidget groups={{'a' : 'Apple', 'b' : 'Peach', 'c': 'Lemon'}} />;
+		return <SelectElementWidget groups={{ a: "Apple", b: "Peach", c: "Lemon" }} />;
 	})
 	.add("Map with value", () => {
-		return <SelectElementWidget groups={{'a' : 'Apple', 'b' : 'Peach', 'c': 'Lemon'}} value="c" />;
+		return <SelectElementWidget groups={{ a: "Apple", b: "Peach", c: "Lemon" }} value="c" />;
 	})
 	.add("Map in groups", () => {
-		return <SelectElementWidget groups={{"Group 1": {'a' : 'Apple', 'b' : 'Peach'}, "Group 2": {'c': 'Lemon'}}} />;
+		return <SelectElementWidget groups={{ "Group 1": { a: "Apple", b: "Peach" }, "Group 2": { c: "Lemon" } }} />;
 	})
 	.add("Map in groups with value", () => {
-		return <SelectElementWidget groups={{"Group 1": {'a' : 'Apple', 'b' : 'Peach'}, "Group 2": {'c': 'Lemon'}}} value="c" />;
+		return (
+			<SelectElementWidget
+				groups={{ "Group 1": { a: "Apple", b: "Peach" }, "Group 2": { c: "Lemon" } }}
+				value="c"
+			/>
+		);
 	});
 
 storiesOf("Forms", module)
@@ -167,12 +163,16 @@ storiesOf("Forms", module)
 storiesOf("Forms/Binded", module)
 	.addDecorator(
 		host({
-			align: "center middle",
+			align: "center middle"
 		})
 	)
 	.add("Binded Form", () => {
 		return (
-			<FormWidget className="pure-form" value={{ Name: "Dylan", Surname: "Vorster" }} formSubmitEvent={action("formSubmitEvent")}>
+			<FormWidget
+				className="pure-form"
+				value={{ Name: "Dylan", Surname: "Vorster" }}
+				formSubmitEvent={action("formSubmitEvent")}
+			>
 				<TableLayoutWidget>
 					<FieldElementWidget name="Name" />
 					<FieldElementWidget name="Surname" />

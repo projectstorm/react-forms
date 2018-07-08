@@ -71,5 +71,3 @@ export class FormGroupWidget extends BaseElementWidget<any, FormGroupWidgetProps
 		return <div {...this.getProps()}>{this.bindChildren(this.props.children)}</div>;
 	}
 }
-
-export var FormGroupWidgetFactory = React.createFactory(FormGroupWidget);

@@ -38,9 +38,8 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 			onChange: event => {
 				this.setValue(event.target.value, this.props.livetype);
 			},
-			onKeyPress: (event) => {
-				if (event.key === 'Enter') {
-
+			onKeyPress: event => {
+				if (event.key === "Enter") {
 					//livetype
 					if (this.props.livetype === false && this.props.valueChangedEvent) {
 						event.preventDefault();
@@ -64,14 +63,10 @@ export class FieldElementWidget extends BaseElementWidget<string, FieldElementWi
 			props["autoComplete"] = "new-password";
 		}
 
-		if(this.props.textArea){
+		if (this.props.textArea) {
 			return <textarea {...props} />;
 		}
 
-		return (
-			<input {...props} />
-		);
+		return <input {...props} />;
 	}
 }
-
-export var FieldElementWidgetFactory = React.createFactory(FieldElementWidget);
