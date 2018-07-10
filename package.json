@@ -24,7 +24,7 @@
     "pretty": "prettier --use-tabs --write \"{src,demos}/**/*.{ts,tsx}\" \"tests/*.tsx\" --print-width 120"
   },
   "dependencies": {
-    "@projectstorm/react-core": "^1.0.0",
+    "@projectstorm/react-core": "^1.1.0",
     "lodash": "^4.17.10",
     "react": "^16.4.1"
   },
