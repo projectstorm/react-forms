@@ -1,6 +1,6 @@
 # STORM React Forms
 
-__DEMO__: http://www.projectstorm.io/react-forms
+__DEMO__: http://projectstorm.cloud/react-forms
 
 A super simple, no-nonsense form library written in React that (hopefully) just works.
 
