@@ -25,8 +25,9 @@ export class CheckboxElementWidget extends BaseElementWidget<
 	render() {
 		return (
 			<input
+				{...this.getProps()}
 				type="checkbox"
-				{...this.props as any}
+
 				checked={this.state.value}
 				onChange={event => {
 					this.setValue(event.target.checked);
