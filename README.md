@@ -1,3 +1,5 @@
+Note: use formik instead :)
+
 # STORM React Forms
 
 __DEMO__: http://projectstorm.cloud/react-forms
